@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="开云体育 - 专业的体育平台，提供VIP服务、资金管理等功能">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="开云体育">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>开云体育</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    .loading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1e88e5, #1565c0);
+      color: white;
+      font-family: 'Arial', sans-serif;
+    }
+    .loading-logo {
+      width: 80px;
+      height: 80px;
+      background: white;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .loading-text {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .loading-subtitle {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 32px;
+    }
+    .loading-spinner {
+      width: 32px;
+      height: 32px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top: 3px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="loading" class="loading">
+    <div class="loading-logo">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="#1e88e5">
+        <path d="M2,21V19H4V17.5C4,16.12 5.12,15 6.5,15H9.5C10.88,15 12,16.12 12,17.5V19H14V17.5C14,16.12 15.12,15 16.5,15H19.5C20.88,15 22,16.12 22,17.5V19H24V21H2M6,11A2,2 0 0,1 8,13A2,2 0 0,1 6,11A2,2 0 0,1 4,9C4,7.89 4.9,7 6,7A2,2 0 0,1 8,9A2,2 0 0,1 6,11M18,11A2,2 0 0,1 20,13A2,2 0 0,1 18,11A2,2 0 0,1 16,9A2,2 0 0,1 18,7A2,2 0 0,1 20,9A2,2 0 0,1 18,11M12,6A2,2 0 0,1 14,8A2,2 0 0,1 12,10A2,2 0 0,1 10,8A2,2 0 0,1 12,6Z"/>
+      </svg>
+    </div>
+    <div class="loading-text">开云体育</div>
+    <div class="loading-subtitle">专业体育平台</div>
+    <div class="loading-spinner"></div>
+  </div>
+  
+  <script>
+    window.addEventListener('load', function(ev) {
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            document.getElementById('loading').remove();
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+  
+  <script src="flutter.js" defer></script>
+</body>
+</html>

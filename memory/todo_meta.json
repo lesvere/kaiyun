@@ -1,0 +1,41 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "完善Flutter项目的页面布局和UI组件",
+        "details": "优化所有页面的布局，确保1:1还原目标网站的视觉效果，完善UI组件的样式和交互",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "完善功能模块的业务逻辑",
+        "details": "完善用户认证、VIP服务、资金操作等核心功能模块，确保与目标网站功能一致",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "完善按钮功能和交互逻辑",
+        "details": "为所有按钮添加适当的点击事件处理，客服按钮保持空链接，其他按钮实现对应功能",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "4": {
+        "id": "4",
+        "content": "优化API集成和数据处理",
+        "details": "完善网络服务层，确保所有API调用正常工作，数据展示完整",
+        "status": "in_progress",
+        "priority": "medium"
+      },
+      "5": {
+        "id": "5",
+        "content": "最终测试和验证",
+        "details": "验证应用能够正常编译运行，所有页面布局正确，功能完整",
+        "status": "pending",
+        "priority": "low"
+      }
+    }
+  }
+}
