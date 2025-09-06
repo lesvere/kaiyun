@@ -1,0 +1,603 @@
+Analyzing kaiyun_sports_app...                                  
+
+  error • The named parameter 'delay' isn't defined • lib/app/core/animations/animation_extensions.dart:14:7 • undefined_named_parameter
+  error • The named parameter 'delay' isn't defined • lib/app/core/animations/animation_extensions.dart:31:7 • undefined_named_parameter
+  error • The named parameter 'delay' isn't defined • lib/app/core/animations/animation_extensions.dart:55:7 • undefined_named_parameter
+  error • The named parameter 'delay' isn't defined • lib/app/core/animations/animation_extensions.dart:71:7 • undefined_named_parameter
+   info • Field overrides a field inherited from 'PageRouteBuilder' • lib/app/core/animations/page_transitions.dart:20:18 • overridden_fields
+   info • The member 'transitionDuration' overrides an inherited member but isn't annotated with '@override' • lib/app/core/animations/page_transitions.dart:20:18 • annotate_overrides
+   info • Field overrides a field inherited from 'PageRouteBuilder' • lib/app/core/animations/page_transitions.dart:21:18 • overridden_fields
+   info • The member 'reverseTransitionDuration' overrides an inherited member but isn't annotated with '@override' • lib/app/core/animations/page_transitions.dart:21:18 • annotate_overrides
+   info • Convert 'settings' to a super parameter • lib/app/core/animations/page_transitions.dart:24:3 • use_super_parameters
+  error • Expected an identifier • lib/app/core/components/animated_button.dart:204:57 • missing_identifier
+  error • Expected to find ']' • lib/app/core/components/animated_button.dart:209:30 • expected_token
+warning • Unused import: '../animations/animation_extensions.dart' • lib/app/core/components/animated_card.dart:4:8 • unused_import
+  error • The method 'SpinKitBounce' isn't defined for the type 'AnimatedLoading' • lib/app/core/components/animated_loading.dart:72:25 • undefined_method
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/animated_loading.dart:119:36 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/animated_loading.dart:267:9 • prefer_const_constructors
+  error • Expected an identifier • lib/app/core/components/animated_loading.dart:281:37 • missing_identifier
+  error • Expected to find ']' • lib/app/core/components/animated_loading.dart:282:37 • expected_token
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_appbar.dart:28:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_appbar.dart:87:16 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_appbar.dart:88:21 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/core/components/app_appbar.dart:89:21 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_appbar.dart:174:12 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/core/components/app_appbar.dart:175:15 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_appbar.dart:316:24 • prefer_const_constructors
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_appbar.dart:436:9 • use_super_parameters
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_button.dart:19:9 • use_super_parameters
+   info • Use a 'SizedBox' to add whitespace to a layout • lib/app/core/components/app_button.dart:38:12 • sized_box_for_whitespace
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_button.dart:189:19 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/core/components/app_button.dart:190:19 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_button.dart:228:17 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/core/components/app_button.dart:229:17 • prefer_const_literals_to_create_immutables
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_card.dart:22:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_card.dart:173:29 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/core/components/app_card.dart:174:17 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_card.dart:197:29 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/core/components/app_card.dart:198:17 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_card.dart:268:12 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/core/components/app_card.dart:269:15 • prefer_const_literals_to_create_immutables
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_card.dart:432:9 • use_super_parameters
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_gradient_container.dart:23:9 • use_super_parameters
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_gradient_container.dart:452:9 • use_super_parameters
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_icon_button.dart:23:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_icon_button.dart:263:19 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/core/components/app_icon_button.dart:264:19 • prefer_const_literals_to_create_immutables
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_list_tile.dart:25:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_list_tile.dart:175:13 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_list_tile.dart:233:19 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_list_tile.dart:234:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_list_tile.dart:235:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_list_tile.dart:299:13 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_list_tile.dart:464:16 • prefer_const_constructors
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_loading.dart:16:9 • use_super_parameters
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/core/components/app_loading.dart:443:22 • prefer_const_literals_to_create_immutables
+   info • Convert 'key' to a super parameter • lib/app/core/components/app_textfield.dart:43:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_textfield.dart:346:19 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/app_textfield.dart:362:19 • prefer_const_constructors
+warning • Unused import: 'package:get/get.dart' • lib/app/core/components/enhanced_bottom_navigation.dart:3:8 • unused_import
+warning • Unused import: '../navigation/navigation_controller.dart' • lib/app/core/components/enhanced_bottom_navigation.dart:5:8 • unused_import
+warning • Unused import: '../../providers/auth_provider.dart' • lib/app/core/components/enhanced_drawer.dart:8:8 • unused_import
+  error • Expected an identifier • lib/app/core/components/enhanced_drawer.dart:179:66 • missing_identifier
+  error • Expected to find ']' • lib/app/core/components/enhanced_drawer.dart:180:42 • expected_token
+  error • Expected an identifier • lib/app/core/components/enhanced_drawer.dart:204:39 • missing_identifier
+  error • Expected to find ']' • lib/app/core/components/enhanced_drawer.dart:205:42 • expected_token
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/enhanced_drawer.dart:416:7 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/core/components/enhanced_drawer.dart:431:7 • prefer_const_constructors
+  error • The getter 'headsetIcon' isn't defined for the type 'MdiIcons' • lib/app/core/components/enhanced_drawer.dart:457:24 • undefined_getter
+warning • The value of the field '_isPressed' isn't used • lib/app/core/components/enhanced_floating_action_button.dart:58:8 • unused_field
+   info • Unnecessary use of 'toList' in a spread • lib/app/core/components/enhanced_floating_action_button.dart:269:14 • unnecessary_to_list_in_spreads
+   info • The 'child' argument should be last in widget constructor invocations • lib/app/core/components/enhanced_floating_action_button.dart:331:7 • sort_child_properties_last
+   info • The 'child' argument should be last in widget constructor invocations • lib/app/core/components/enhanced_floating_action_button.dart:368:7 • sort_child_properties_last
+   info • The 'child' argument should be last in widget constructor invocations • lib/app/core/components/enhanced_floating_action_button.dart:385:7 • sort_child_properties_last
+  error • Directives must appear before any declarations • lib/app/core/components/enhanced_navigation_buttons.dart:404:1 • directive_after_declaration
+warning • The value of the field '_isHovered' isn't used • lib/app/core/components/micro_interactions.dart:156:8 • unused_field
+  error • Target of URI doesn't exist: 'error_display_widget.dart' • lib/app/core/error_recovery/error_retry_manager.dart:9:8 • uri_does_not_exist
+   info • Don't use 'BuildContext's across async gaps • lib/app/core/error_recovery/error_retry_manager.dart:99:9 • use_build_context_synchronously
+  error • Undefined name 'ErrorToast' • lib/app/core/error_recovery/error_retry_manager.dart:119:5 • undefined_identifier
+   info • The 'child' argument should be last in widget constructor invocations • lib/app/core/error_recovery/error_retry_manager.dart:225:7 • sort_child_properties_last
+  error • The method 'ErrorDisplayWidget' isn't defined for the type '_ErrorBoundaryState' • lib/app/core/error_recovery/error_retry_manager.dart:299:14 • undefined_method
+  error • The method 'ErrorDisplayWidget' isn't defined for the type '_RetryFutureBuilderState' • lib/app/core/error_recovery/error_retry_manager.dart:374:18 • undefined_method
+   info • The null check operator shouldn't be used on a variable whose type is a potentially nullable type parameter • lib/app/core/error_recovery/error_retry_manager.dart:389:55 • null_check_on_nullable_type_parameter
+  error • NetworkService.NetworkType isn't a type • lib/app/core/http_service_manager.dart:131:9 • not_a_type
+  error • The argument type 'Routing' can't be assigned to the parameter type 'RxInterface<Routing?>' • lib/app/core/navigation/navigation_controller.dart:23:10 • argument_type_not_assignable
+warning • The operand can't be null, so the condition is always 'true' • lib/app/core/navigation/navigation_controller.dart:28:44 • unnecessary_null_comparison
+warning • The '!' will have no effect because the receiver can't be null • lib/app/core/navigation/navigation_controller.dart:29:43 • unnecessary_non_null_assertion
+  error • The method 'canPop' isn't defined for the type '_GetImpl' • lib/app/core/navigation/navigation_controller.dart:79:13 • undefined_method
+warning • Unused import: '../error/error_types.dart' • lib/app/core/network/network_recovery_manager.dart:5:8 • unused_import
+  error • Target of URI doesn't exist: 'offline_data_manager.dart' • lib/app/core/network/network_recovery_manager.dart:7:8 • uri_does_not_exist
+  error • Undefined class 'OfflineDataManager' • lib/app/core/network/network_recovery_manager.dart:17:9 • undefined_class
+  error • The method 'OfflineDataManager' isn't defined for the type 'NetworkRecoveryManager' • lib/app/core/network/network_recovery_manager.dart:17:46 • undefined_method
+warning • The value of the field '_errorHandler' isn't used • lib/app/core/network/network_recovery_manager.dart:18:22 • unused_field
+  error • Undefined class 'OfflineRequest' • lib/app/core/network/network_recovery_manager.dart:277:39 • undefined_class
+  error • Target of URI doesn't exist: 'error_types.dart' • lib/app/core/offline/offline_data_manager.dart:5:8 • uri_does_not_exist
+  error • The method 'deleteKey' isn't defined for the type 'SecureStorageService' • lib/app/core/offline/offline_data_manager.dart:198:34 • undefined_method
+  error • The method 'deleteKey' isn't defined for the type 'SecureStorageService' • lib/app/core/offline/offline_data_manager.dart:199:34 • undefined_method
+  error • The method 'deleteKey' isn't defined for the type 'SecureStorageService' • lib/app/core/offline/offline_data_manager.dart:200:34 • undefined_method
+  error • The method 'getValue' isn't defined for the type 'SecureStorageService' • lib/app/core/offline/offline_data_manager.dart:251:47 • undefined_method
+  error • The method 'getValue' isn't defined for the type 'SecureStorageService' • lib/app/core/offline/offline_data_manager.dart:275:47 • undefined_method
+  error • The method 'saveValue' isn't defined for the type 'SecureStorageService' • lib/app/core/offline/offline_data_manager.dart:307:34 • undefined_method
+  error • The method 'saveValue' isn't defined for the type 'SecureStorageService' • lib/app/core/offline/offline_data_manager.dart:325:34 • undefined_method
+  error • Invalid constant value • lib/app/core/theme/app_theme.dart:31:33 • invalid_constant
+  error • The argument type 'BottomNavigationBarTheme' can't be assigned to the parameter type 'BottomNavigationBarThemeData?' • lib/app/core/theme/app_theme.dart:31:33 • argument_type_not_assignable
+  error • The named parameter 'child' is required, but there's no corresponding argument • lib/app/core/theme/app_theme.dart:31:39 • missing_required_argument
+  error • The named parameter 'data' is required, but there's no corresponding argument • lib/app/core/theme/app_theme.dart:31:39 • missing_required_argument
+  error • The named parameter 'backgroundColor' isn't defined • lib/app/core/theme/app_theme.dart:32:9 • undefined_named_parameter
+  error • The named parameter 'selectedItemColor' isn't defined • lib/app/core/theme/app_theme.dart:33:9 • undefined_named_parameter
+  error • The named parameter 'unselectedItemColor' isn't defined • lib/app/core/theme/app_theme.dart:34:9 • undefined_named_parameter
+  error • The named parameter 'type' isn't defined • lib/app/core/theme/app_theme.dart:35:9 • undefined_named_parameter
+  error • The named parameter 'elevation' isn't defined • lib/app/core/theme/app_theme.dart:36:9 • undefined_named_parameter
+  error • The named parameter 'selectedLabelStyle' isn't defined • lib/app/core/theme/app_theme.dart:37:9 • undefined_named_parameter
+  error • The named parameter 'unselectedLabelStyle' isn't defined • lib/app/core/theme/app_theme.dart:41:9 • undefined_named_parameter
+  error • Invalid constant value • lib/app/core/theme/app_theme.dart:198:33 • invalid_constant
+  error • The argument type 'BottomNavigationBarTheme' can't be assigned to the parameter type 'BottomNavigationBarThemeData?' • lib/app/core/theme/app_theme.dart:198:33 • argument_type_not_assignable
+  error • The named parameter 'child' is required, but there's no corresponding argument • lib/app/core/theme/app_theme.dart:198:39 • missing_required_argument
+  error • The named parameter 'data' is required, but there's no corresponding argument • lib/app/core/theme/app_theme.dart:198:39 • missing_required_argument
+  error • The named parameter 'backgroundColor' isn't defined • lib/app/core/theme/app_theme.dart:199:9 • undefined_named_parameter
+  error • The named parameter 'selectedItemColor' isn't defined • lib/app/core/theme/app_theme.dart:200:9 • undefined_named_parameter
+  error • The named parameter 'unselectedItemColor' isn't defined • lib/app/core/theme/app_theme.dart:201:9 • undefined_named_parameter
+  error • The named parameter 'type' isn't defined • lib/app/core/theme/app_theme.dart:202:9 • undefined_named_parameter
+  error • The named parameter 'elevation' isn't defined • lib/app/core/theme/app_theme.dart:203:9 • undefined_named_parameter
+   info • Convert 'key' to a super parameter • lib/app/core/ui/error_display_widget.dart:16:9 • use_super_parameters
+  error • Expected an identifier • lib/app/core/ui/error_display_widget.dart:81:42 • missing_identifier
+  error • Expected to find ']' • lib/app/core/ui/error_display_widget.dart:82:38 • expected_token
+  error • Expected an identifier • lib/app/core/ui/error_display_widget.dart:120:51 • missing_identifier
+  error • Expected to find ']' • lib/app/core/ui/error_display_widget.dart:121:39 • expected_token
+   info • The declaration '_getButtonColor' isn't referenced • lib/app/core/ui/error_display_widget.dart:260:9 • unused_element
+   info • The declaration '_handleAuthRequired' isn't referenced • lib/app/core/ui/error_display_widget.dart:265:8 • unused_element
+   info • Convert 'key' to a super parameter • lib/app/core/ui/error_display_widget.dart:430:9 • use_super_parameters
+   info • The imported package 'dio_cache_interceptor' isn't a dependency of the importing package • lib/app/data/api/api_service.dart:6:8 • depend_on_referenced_packages
+  error • Target of URI doesn't exist: 'package:dio_cache_interceptor/dio_cache_interceptor.dart' • lib/app/data/api/api_service.dart:6:8 • uri_does_not_exist
+   info • The imported package 'dio_certificate_pinning' isn't a dependency of the importing package • lib/app/data/api/api_service.dart:7:8 • depend_on_referenced_packages
+  error • Target of URI doesn't exist: 'package:dio_certificate_pinning/dio_certificate_pinning.dart' • lib/app/data/api/api_service.dart:7:8 • uri_does_not_exist
+   info • The private field _pendingRequests could be 'final' • lib/app/data/api/api_service.dart:22:24 • prefer_final_fields
+  error • The method 'CacheOptions' isn't defined for the type 'ApiService' • lib/app/data/api/api_service.dart:25:25 • undefined_method
+  error • The method 'MemCacheStore' isn't defined for the type 'ApiService' • lib/app/data/api/api_service.dart:26:12 • undefined_method
+  error • Undefined name 'CachePolicy' • lib/app/data/api/api_service.dart:27:13 • undefined_identifier
+  error • Undefined name 'CachePriority' • lib/app/data/api/api_service.dart:30:15 • undefined_identifier
+  error • Undefined name 'CacheOptions' • lib/app/data/api/api_service.dart:32:17 • undefined_identifier
+   info • Use 'const' with the constructor to improve performance • lib/app/data/api/api_service.dart:46:23 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/data/api/api_service.dart:47:23 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/data/api/api_service.dart:48:20 • prefer_const_constructors
+  error • The method 'DioCacheInterceptor' isn't defined for the type 'ApiService' • lib/app/data/api/api_service.dart:77:27 • undefined_method
+  error • The method 'CertificatePinningInterceptor' isn't defined for the type 'ApiService' • lib/app/data/api/api_service.dart:82:9 • undefined_method
+   info • Use 'const' with the constructor to improve performance • lib/app/data/api/api_service.dart:481:41 • prefer_const_constructors
+  error • The getter 'betOptions' isn't defined for the type 'ApiConfig' • lib/app/data/services/betting_service.dart:50:22 • undefined_getter
+  error • The getter 'cancelBet' isn't defined for the type 'ApiConfig' • lib/app/data/services/betting_service.dart:66:19 • undefined_getter
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/customer_service.dart:26:83 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/customer_service.dart:50:76 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/customer_service.dart:69:81 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/customer_service.dart:108:76 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/customer_service.dart:137:71 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/customer_service.dart:168:73 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/customer_service.dart:182:80 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/customer_service.dart:194:78 • extra_positional_arguments_could_be_named
+warning • Unused import: 'package:dio/dio.dart' • lib/app/data/services/finance_service.dart:2:8 • unused_import
+  error • The name 'NetworkStatus' isn't a type, so it can't be used as a type argument • lib/app/data/services/network_service.dart:14:26 • non_type_as_type_argument
+  error • The name 'NetworkStatus' isn't a type, so it can't be used as a type argument • lib/app/data/services/network_service.dart:15:24 • non_type_as_type_argument
+  error • Enums can't be declared inside classes • lib/app/data/services/network_service.dart:18:3 • enum_in_class
+  error • Enums can't be declared inside classes • lib/app/data/services/network_service.dart:26:3 • enum_in_class
+  error • The name 'NetworkStatus' isn't a type, so it can't be used as a type argument • lib/app/data/services/network_service.dart:35:10 • non_type_as_type_argument
+  error • Undefined class 'NetworkStatus' • lib/app/data/services/network_service.dart:64:5 • undefined_class
+  error • Undefined name 'NetworkStatus' • lib/app/data/services/network_service.dart:69:18 • undefined_identifier
+  error • Undefined name 'NetworkStatus' • lib/app/data/services/network_service.dart:73:18 • undefined_identifier
+  error • Undefined class 'NetworkType' • lib/app/data/services/network_service.dart:89:3 • undefined_class
+  error • Undefined name 'NetworkType' • lib/app/data/services/network_service.dart:92:16 • undefined_identifier
+  error • Undefined name 'NetworkType' • lib/app/data/services/network_service.dart:94:16 • undefined_identifier
+  error • Undefined name 'NetworkType' • lib/app/data/services/network_service.dart:96:16 • undefined_identifier
+  error • Undefined name 'NetworkType' • lib/app/data/services/network_service.dart:99:16 • undefined_identifier
+  error • Undefined class 'NetworkStatus' • lib/app/data/services/network_service.dart:133:9 • undefined_class
+  error • Undefined name 'NetworkStatus' • lib/app/data/services/network_service.dart:136:20 • undefined_identifier
+  error • Undefined name 'NetworkStatus' • lib/app/data/services/network_service.dart:138:20 • undefined_identifier
+  error • Undefined name 'NetworkStatus' • lib/app/data/services/network_service.dart:140:20 • undefined_identifier
+  error • Undefined name 'NetworkStatus' • lib/app/data/services/network_service.dart:201:21 • undefined_identifier
+  error • NetworkService.NetworkStatus isn't a type • lib/app/data/services/network_service.dart:221:9 • not_a_type
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/rebate_service.dart:61:65 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/rebate_service.dart:96:64 • extra_positional_arguments_could_be_named
+   info • Don't invoke 'print' in production code • lib/app/data/services/rebate_service.dart:114:7 • avoid_print
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/referral_service.dart:48:67 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/referral_service.dart:67:64 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/referral_service.dart:85:72 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/referral_service.dart:103:69 • extra_positional_arguments_could_be_named
+  error • Too many positional arguments: 1 expected, but 2 found • lib/app/data/services/referral_service.dart:124:67 • extra_positional_arguments_could_be_named
+  error • Invalid constant value • lib/app/data/services/secure_storage_service.dart:14:22 • invalid_constant
+  error • Undefined name 'IOSAccessibility' • lib/app/data/services/secure_storage_service.dart:14:22 • undefined_identifier
+warning • Unused import: '../models/user_model.dart' • lib/app/data/services/vip_service.dart:3:8 • unused_import
+  error • 'ms' must have a method body because 'VipService' isn't abstract • lib/app/data/services/vip_service.dart:411:4 • concrete_class_with_abstract_member
+  error • 'catch' can't be used as an identifier because it's a keyword • lib/app/data/services/vip_service.dart:412:7 • expected_identifier_but_got_keyword
+  error • Undefined name 'userLevel' • lib/app/data/services/vip_service.dart:413:39 • undefined_identifier
+  error • Expected a method, getter, setter or operator declaration • lib/app/data/services/vip_service.dart:415:3 • expected_executable
+  error • The named parameter 'value' isn't defined • lib/app/data/services/vip_service.dart:425:9 • undefined_named_parameter
+  error • The named parameter 'type' isn't defined • lib/app/data/services/vip_service.dart:426:9 • undefined_named_parameter
+  error • Undefined name 'ExchangeType' • lib/app/data/services/vip_service.dart:426:15 • undefined_identifier
+  error • The named parameter 'requiredLevel' isn't defined • lib/app/data/services/vip_service.dart:427:9 • undefined_named_parameter
+  error • The named parameter 'value' isn't defined • lib/app/data/services/vip_service.dart:436:9 • undefined_named_parameter
+  error • The named parameter 'type' isn't defined • lib/app/data/services/vip_service.dart:437:9 • undefined_named_parameter
+  error • Undefined name 'ExchangeType' • lib/app/data/services/vip_service.dart:437:15 • undefined_identifier
+  error • The named parameter 'requiredLevel' isn't defined • lib/app/data/services/vip_service.dart:438:9 • undefined_named_parameter
+  error • The named parameter 'value' isn't defined • lib/app/data/services/vip_service.dart:448:11 • undefined_named_parameter
+  error • The named parameter 'type' isn't defined • lib/app/data/services/vip_service.dart:449:11 • undefined_named_parameter
+  error • Undefined name 'ExchangeType' • lib/app/data/services/vip_service.dart:449:17 • undefined_identifier
+  error • The named parameter 'requiredLevel' isn't defined • lib/app/data/services/vip_service.dart:450:11 • undefined_named_parameter
+  error • Expected a method, getter, setter or operator declaration • lib/app/data/services/vip_service.dart:468:1 • expected_executable
+warning • The value of the local variable 'identifier' isn't used • lib/app/providers/auth_provider.dart:79:14 • unused_local_variable
+   info • The import of 'package:flutter/foundation.dart' is unnecessary because all of the used elements are also provided by the import of 'package:flutter/material.dart' • lib/app/providers/theme_provider.dart:1:8 • unnecessary_import
+  error • Target of URI doesn't exist: 'page_transitions.dart' • lib/app/routes/app_pages_enhanced.dart:23:8 • uri_does_not_exist
+  error • Undefined name 'Curves' • lib/app/routes/app_pages_enhanced.dart:73:14 • undefined_identifier
+  error • Undefined name 'Curves' • lib/app/routes/app_pages_enhanced.dart:88:14 • undefined_identifier
+  error • Undefined name 'Curves' • lib/app/routes/app_pages_enhanced.dart:97:14 • undefined_identifier
+  error • Undefined name 'Curves' • lib/app/routes/app_pages_enhanced.dart:104:14 • undefined_identifier
+  error • Undefined name 'Curves' • lib/app/routes/app_pages_enhanced.dart:111:14 • undefined_identifier
+warning • Unused import: 'package:get/get.dart' • lib/app/views/auth/biometric_setup_page.dart:3:8 • unused_import
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/biometric_setup_page.dart:311:9 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/biometric_setup_page.dart:320:9 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/biometric_setup_page.dart:330:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/biometric_setup_page.dart:348:9 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/biometric_setup_page.dart:355:9 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/biometric_setup_page.dart:365:7 • use_build_context_synchronously
+warning • The value of the field '_codeSent' isn't used • lib/app/views/auth/forgot_password_page.dart:24:8 • unused_field
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/forgot_password_page.dart:666:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/forgot_password_page.dart:673:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/forgot_password_page.dart:705:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/forgot_password_page.dart:712:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/forgot_password_page.dart:732:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/forgot_password_page.dart:744:7 • use_build_context_synchronously
+  error • The class '_LoginPageState' doesn't have an unnamed constructor • lib/app/views/auth/login_page.dart:12:37 • new_with_undefined_constructor_default
+   info • Use 'const' with the constructor to improve performance • lib/app/views/auth/login_page.dart:191:33 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/auth/login_page.dart:222:33 • prefer_const_constructors
+  error • Expected an identifier • lib/app/views/auth/login_page.dart:397:36 • missing_identifier
+  error • Expected to find ']' • lib/app/views/auth/login_page.dart:402:20 • expected_token
+   info • Use 'const' with the constructor to improve performance • lib/app/views/auth/login_page.dart:520:18 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/auth/login_page.dart:522:21 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/auth/login_page.dart:525:13 • prefer_const_constructors
+  error • Expected a class member • lib/app/views/auth/login_page.dart:552:4 • expected_class_member
+  error • 'of' must have a method body because '_LoginPageState' isn't abstract • lib/app/views/auth/login_page.dart:552:5 • concrete_class_with_abstract_member
+  error • Named parameters must be enclosed in curly braces ('{' and '}') • lib/app/views/auth/login_page.dart:552:37 • named_parameter_outside_group
+  error • Using a colon as the separator before a default value is no longer supported • lib/app/views/auth/login_page.dart:552:37 • obsolete_colon_for_default_value
+  error • The name of a constructor must match the name of the enclosing class • lib/app/views/auth/login_page.dart:554:7 • invalid_constructor_name
+  error • The prefix '_usernameController' can't be used here because it's shadowed by a local declaration • lib/app/views/auth/login_page.dart:555:9 • prefix_shadowed_by_local_declaration
+  error • Expected an identifier • lib/app/views/auth/login_page.dart:555:33 • missing_identifier
+  error • The prefix '_passwordController' can't be used here because it's shadowed by a local declaration • lib/app/views/auth/login_page.dart:556:9 • prefix_shadowed_by_local_declaration
+  error • Expected an identifier • lib/app/views/auth/login_page.dart:556:33 • missing_identifier
+   info • Empty constructor bodies should be written using a ';' rather than '{}' • lib/app/views/auth/login_page.dart:557:8 • empty_constructor_bodies
+  error • A function body must be provided • lib/app/views/auth/login_page.dart:557:8 • missing_function_body
+  error • Expected a class member • lib/app/views/auth/login_page.dart:557:8 • expected_class_member
+  error • 'then' must have a method body because '_LoginPageState' isn't abstract • lib/app/views/auth/login_page.dart:557:9 • concrete_class_with_abstract_member
+   info • Use the generic function type syntax to declare the parameter '' • lib/app/views/auth/login_page.dart:557:14 • use_function_type_syntax_for_parameters
+  error • Expected an identifier • lib/app/views/auth/login_page.dart:557:14 • missing_identifier
+  error • Expected to find ')' • lib/app/views/auth/login_page.dart:557:24 • expected_token
+  error • Expected a method, getter, setter or operator declaration • lib/app/views/auth/login_page.dart:570:3 • expected_executable
+   info • The declaration '_handleBiometricLogin' isn't referenced • lib/app/views/auth/login_page.dart:572:8 • unused_element
+  error • Undefined name 'context' • lib/app/views/auth/login_page.dart:573:52 • undefined_identifier
+  error • Undefined name 'context' • lib/app/views/auth/login_page.dart:579:28 • undefined_identifier
+   info • The declaration '_showPinLoginDialog' isn't referenced • lib/app/views/auth/login_page.dart:588:8 • unused_element
+  error • Undefined name 'context' • lib/app/views/auth/login_page.dart:590:16 • undefined_identifier
+  error • Undefined name 'context' • lib/app/views/auth/login_page.dart:632:41 • undefined_identifier
+  error • Undefined name 'context' • lib/app/views/auth/login_page.dart:666:28 • undefined_identifier
+  error • Undefined name 'context' • lib/app/views/auth/login_page.dart:675:52 • undefined_identifier
+  error • Undefined name 'context' • lib/app/views/auth/login_page.dart:678:18 • undefined_identifier
+  error • Undefined name 'context' • lib/app/views/auth/login_page.dart:683:28 • undefined_identifier
+  error • Expected a method, getter, setter or operator declaration • lib/app/views/auth/login_page.dart:691:1 • expected_executable
+  error • The method 'notificationFeedback' isn't defined for the type 'HapticFeedback' • lib/app/views/auth/login_page_enhanced.dart:101:24 • undefined_method
+  error • Undefined name 'NotificationFeedbackType' • lib/app/views/auth/login_page_enhanced.dart:101:45 • undefined_identifier
+   info • Use 'const' with the constructor to improve performance • lib/app/views/auth/login_page_enhanced.dart:277:21 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/auth/login_page_enhanced.dart:285:30 • prefer_const_constructors
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/pin_setup_page.dart:407:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/pin_setup_page.dart:421:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/register_page.dart:352:9 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/auth/register_page.dart:360:9 • use_build_context_synchronously
+warning • Unused import: 'package:get/get.dart' • lib/app/views/auth/security_settings_page.dart:2:8 • unused_import
+warning • Unused import: '../../routes/app_routes.dart' • lib/app/views/auth/security_settings_page.dart:6:8 • unused_import
+   info • The private field _selectedBetType could be 'final' • lib/app/views/betting/betting_page.dart:22:11 • prefer_final_fields
+   info • The private field _selectedOptions could be 'final' • lib/app/views/betting/betting_page.dart:23:19 • prefer_final_fields
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components/navigation_test_page.dart:100:22 • prefer_const_literals_to_create_immutables
+   info • Convert 'key' to a super parameter • lib/app/views/components/security_verification_dialog.dart:16:9 • use_super_parameters
+   info • Function literals shouldn't be passed to 'forEach' • lib/app/views/components/security_verification_dialog.dart:69:25 • avoid_function_literals_in_foreach_calls
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components/security_verification_dialog.dart:107:19 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components/security_verification_dialog.dart:108:19 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components/security_verification_dialog.dart:109:19 • prefer_const_literals_to_create_immutables
+   info • Unnecessary use of 'toList' in a spread • lib/app/views/components/security_verification_dialog.dart:204:14 • unnecessary_to_list_in_spreads
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components/security_verification_dialog.dart:306:22 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components/security_verification_dialog.dart:340:33 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components/security_verification_dialog.dart:342:31 • prefer_const_constructors
+   info • Convert 'key' to a super parameter • lib/app/views/components/transaction_confirm_dialog.dart:17:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components/transaction_confirm_dialog.dart:139:11 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components/transaction_confirm_dialog.dart:140:23 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components/transaction_confirm_dialog.dart:141:15 • prefer_const_constructors
+   info • Unnecessary use of 'toList' in a spread • lib/app/views/components/transaction_confirm_dialog.dart:160:14 • unnecessary_to_list_in_spreads
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components/transaction_confirm_dialog.dart:221:14 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components/transaction_confirm_dialog.dart:223:19 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components/transaction_confirm_dialog.dart:224:11 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components/transaction_confirm_dialog.dart:225:23 • prefer_const_literals_to_create_immutables
+   info • Convert 'key' to a super parameter • lib/app/views/components/transaction_confirm_dialog.dart:345:9 • use_super_parameters
+   info • Convert 'key' to a super parameter • lib/app/views/components_showcase.dart:8:9 • use_super_parameters
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:212:18 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:215:22 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:216:23 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:231:22 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:236:18 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:239:22 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:240:23 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:258:9 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:263:9 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:268:9 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:273:9 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:288:15 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:290:24 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:314:24 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components_showcase.dart:315:29 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:316:21 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:318:21 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:318:42 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:328:24 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components_showcase.dart:329:29 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:330:21 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:332:21 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:332:41 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:356:19 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:358:20 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:358:37 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:390:12 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components_showcase.dart:391:17 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:392:9 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components_showcase.dart:394:21 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:395:13 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components_showcase.dart:396:25 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:397:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:402:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:402:37 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:405:13 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components_showcase.dart:406:25 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:407:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:412:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:412:37 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:415:13 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components_showcase.dart:416:25 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:417:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:422:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:422:37 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:425:13 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/components_showcase.dart:426:25 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:427:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:432:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:432:37 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:438:9 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:443:9 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:445:9 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/components_showcase.dart:450:9 • prefer_const_constructors
+  error • Undefined name 'WidgetStateProperty' • lib/app/views/customer/customer_page.dart:202:35 • undefined_identifier
+  error • Undefined name 'WidgetState' • lib/app/views/customer/customer_page.dart:203:43 • undefined_identifier
+  error • Undefined name 'WidgetStateProperty' • lib/app/views/customer/customer_page.dart:705:41 • undefined_identifier
+  error • Undefined name 'WidgetState' • lib/app/views/customer/customer_page.dart:706:49 • undefined_identifier
+   info • Use 'const' with the constructor to improve performance • lib/app/views/customer/customer_page.dart:757:17 • prefer_const_constructors
+   info • The declaration '_openChatPage' isn't referenced • lib/app/views/customer/customer_page.dart:931:8 • unused_element
+   info • Use 'const' with the constructor to improve performance • lib/app/views/customer/customer_page.dart:1036:16 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/customer/customer_page.dart:1037:21 • prefer_const_literals_to_create_immutables
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/customer/customer_page.dart:1110:7 • use_build_context_synchronously
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/balance_query_page.dart:122:11 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/balance_query_page.dart:275:24 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/balance_query_page.dart:276:29 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/balance_query_page.dart:277:21 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/balance_query_page.dart:486:14 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/balance_query_page.dart:488:19 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/balance_query_page.dart:489:11 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/balance_query_page.dart:490:23 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/balance_query_page.dart:491:15 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/bank_card_manage_page.dart:284:11 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/bank_card_manage_page.dart:319:11 • prefer_const_constructors
+warning • Unused import: 'package:material_design_icons_flutter/material_design_icons_flutter.dart' • lib/app/views/finance/deposit_page.dart:3:8 • unused_import
+warning • Unused import: '../components/security_verification_dialog.dart' • lib/app/views/finance/deposit_page.dart:8:8 • unused_import
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/deposit_page.dart:148:19 • prefer_const_constructors
+  error • Expected an identifier • lib/app/views/finance/deposit_page.dart:183:51 • missing_identifier
+  error • Expected to find ']' • lib/app/views/finance/deposit_page.dart:184:42 • expected_token
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/deposit_page.dart:393:13 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/deposit_page.dart:394:25 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/deposit_page.dart:395:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/deposit_page.dart:509:15 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/deposit_page.dart:510:24 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/deposit_page.dart:512:29 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/deposit_page.dart:532:15 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/deposit_page.dart:554:14 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/deposit_page.dart:556:19 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/deposit_page.dart:557:11 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/deposit_page.dart:558:23 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/deposit_page.dart:559:15 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transaction_records_page.dart:503:11 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transaction_records_page.dart:534:12 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transaction_records_page.dart:535:14 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/transaction_records_page.dart:537:19 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transaction_records_page.dart:538:11 • prefer_const_constructors
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/finance/transaction_records_page.dart:648:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/finance/transaction_records_page.dart:660:7 • use_build_context_synchronously
+  error • The argument type 'AccountBalance?' can't be assigned to the parameter type 'double?' • lib/app/views/finance/transfer_page.dart:78:43 • argument_type_not_assignable
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:128:19 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/transfer_page.dart:129:19 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:208:24 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:233:29 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:279:24 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:305:29 • prefer_const_constructors
+   info • Unnecessary braces in a string interpolation • lib/app/views/finance/transfer_page.dart:336:32 • unnecessary_brace_in_string_interps
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:338:31 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:453:24 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:487:29 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:505:14 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/transfer_page.dart:507:19 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:508:11 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/transfer_page.dart:509:23 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:510:15 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:548:14 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/transfer_page.dart:550:19 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/transfer_page.dart:551:11 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/transfer_page.dart:552:23 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/withdrawal_page.dart:266:11 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/withdrawal_page.dart:628:14 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/withdrawal_page.dart:630:19 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/withdrawal_page.dart:631:11 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/finance/withdrawal_page.dart:632:23 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/finance/withdrawal_page.dart:633:15 • prefer_const_constructors
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/finance/withdrawal_page.dart:820:7 • use_build_context_synchronously
+warning • Unused import: '../../core/components/animated_button.dart' • lib/app/views/home/home_page.dart:11:8 • unused_import
+  error • The getter 'headsetIcon' isn't defined for the type 'MdiIcons' • lib/app/views/home/home_page.dart:79:22 • undefined_getter
+  error • The getter 'headsetIcon' isn't defined for the type 'MdiIcons' • lib/app/views/home/home_page.dart:80:28 • undefined_getter
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/home/home_page.dart:154:26 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/home/home_page.dart:304:20 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/home/home_page.dart:317:20 • prefer_const_constructors
+  error • Couldn't infer type parameter 'E'.
+
+Tried to infer 'Map<String, Object>' for 'E' which doesn't work:
+  Parameter 'element' declared as     'E'
+                      but argument is 'Map<String, Object?>'.
+The type 'Map<String, Object>' was inferred from:
+  Parameter 'element' declared as     'E'
+                      but argument is 'Map<String, Object>'.
+  Parameter 'element' declared as     'E'
+                      but argument is 'Map<String, InvalidType>'.
+
+Consider passing explicit type argument(s) to the generic.
+
+ • lib/app/views/home/home_page.dart:493:21 • could_not_infer
+  error • The element type 'Map<String, Object?>' can't be assigned to the list type 'Map<String, Object>' • lib/app/views/home/home_page.dart:494:7 • list_element_type_not_assignable
+  error • The element type 'Map<String, Object?>' can't be assigned to the list type 'Map<String, Object>' • lib/app/views/home/home_page.dart:500:7 • list_element_type_not_assignable
+  error • The element type 'Map<String, Object?>' can't be assigned to the list type 'Map<String, Object>' • lib/app/views/home/home_page.dart:506:7 • list_element_type_not_assignable
+  error • The getter 'headsetIcon' isn't defined for the type 'MdiIcons' • lib/app/views/home/home_page.dart:531:26 • undefined_getter
+  error • The getter 'headsetIcon' isn't defined for the type 'MdiIcons' • lib/app/views/mine/mine_page.dart:50:42 • undefined_getter
+   info • Use 'const' with the constructor to improve performance • lib/app/views/mine/mine_page.dart:300:26 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/mine/mine_page.dart:302:31 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/mine/mine_page.dart:312:23 • prefer_const_constructors
+  error • The getter 'rebate' isn't defined for the type 'AppRoutes' • lib/app/views/mine/mine_page.dart:344:28 • undefined_getter
+  error • The getter 'agent' isn't defined for the type 'AppRoutes' • lib/app/views/mine/mine_page.dart:369:28 • undefined_getter
+   info • Use 'const' with the constructor to improve performance • lib/app/views/mine/mine_page.dart:539:20 • prefer_const_constructors
+warning • Unused import: 'package:provider/provider.dart' • lib/app/views/records/bet_record_page.dart:2:8 • unused_import
+  error • Target of URI doesn't exist: '../../data/models/bet_models.dart' • lib/app/views/records/bet_record_page.dart:4:8 • uri_does_not_exist
+  error • Target of URI doesn't exist: '../../providers/bet_provider.dart' • lib/app/views/records/bet_record_page.dart:5:8 • uri_does_not_exist
+  error • Target of URI doesn't exist: '../../data/services/bet_service.dart' • lib/app/views/records/bet_record_page.dart:6:8 • uri_does_not_exist
+  error • Undefined class 'BetService' • lib/app/views/records/bet_record_page.dart:18:9 • undefined_class
+  error • The method 'BetService' isn't defined for the type '_BetRecordPageState' • lib/app/views/records/bet_record_page.dart:18:34 • undefined_method
+  error • Undefined class 'BetStatistics' • lib/app/views/records/bet_record_page.dart:20:3 • undefined_class
+  error • The name 'BetRecord' isn't a type, so it can't be used as a type argument • lib/app/views/records/bet_record_page.dart:21:8 • non_type_as_type_argument
+  error • Undefined class 'BetStatus' • lib/app/views/records/bet_record_page.dart:23:3 • undefined_class
+  error • The name 'BetStatistics' isn't a type, so it can't be used in an 'as' expression • lib/app/views/records/bet_record_page.dart:50:37 • cast_to_non_type
+  error • The name 'BetRecord' isn't a type, so it can't be used as a type argument • lib/app/views/records/bet_record_page.dart:51:42 • non_type_as_type_argument
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:95:34 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:96:34 • undefined_identifier
+   info • Use 'const' with the constructor to improve performance • lib/app/views/records/bet_record_page.dart:123:17 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/records/bet_record_page.dart:124:29 • prefer_const_literals_to_create_immutables
+  error • Undefined class 'BetStatus' • lib/app/views/records/bet_record_page.dart:205:27 • undefined_class
+  error • The property 'status' can't be unconditionally accessed because the receiver can be 'null' • lib/app/views/records/bet_record_page.dart:208:42 • unchecked_use_of_nullable_value
+  error • The name 'BetRecord' isn't a type, so it can't be used as a type argument • lib/app/views/records/bet_record_page.dart:223:29 • non_type_as_type_argument
+  error • Undefined class 'BetRecord' • lib/app/views/records/bet_record_page.dart:257:24 • undefined_class
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:362:37 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:371:42 • undefined_identifier
+  error • The body might complete normally, causing 'null' to be returned, but the return type, 'Color', is a potentially non-nullable type • lib/app/views/records/bet_record_page.dart:388:9 • body_might_complete_normally
+  error • Undefined class 'BetStatus' • lib/app/views/records/bet_record_page.dart:388:25 • undefined_class
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:390:12 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:392:12 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:394:12 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:396:12 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:398:12 • undefined_identifier
+  error • The body might complete normally, causing 'null' to be returned, but the return type, 'IconData', is a potentially non-nullable type • lib/app/views/records/bet_record_page.dart:403:12 • body_might_complete_normally
+  error • Undefined class 'BetStatus' • lib/app/views/records/bet_record_page.dart:403:27 • undefined_class
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:405:12 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:407:12 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:409:12 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:411:12 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:413:12 • undefined_identifier
+  error • Undefined class 'BetRecord' • lib/app/views/records/bet_record_page.dart:418:23 • undefined_class
+  error • Undefined class 'BetRecord' • lib/app/views/records/bet_record_page.dart:427:31 • undefined_class
+   info • Use 'const' with the constructor to improve performance • lib/app/views/records/bet_record_page.dart:458:17 • prefer_const_constructors
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:474:35 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:476:35 • undefined_identifier
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:485:35 • undefined_identifier
+  error • Expected an identifier • lib/app/views/records/bet_record_page.dart:485:54 • missing_identifier
+  error • Expected to find ']' • lib/app/views/records/bet_record_page.dart:497:20 • expected_token
+  error • The named parameter 'bottom' isn't defined • lib/app/views/records/bet_record_page.dart:500:32 • undefined_named_parameter
+  error • Undefined class 'BetRecord' • lib/app/views/records/bet_record_page.dart:538:27 • undefined_class
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/records/bet_record_page.dart:566:11 • use_build_context_synchronously
+  error • The name 'BetStatus' isn't a type, so it can't be used as a type argument • lib/app/views/records/bet_record_page.dart:587:41 • non_type_as_type_argument
+  error • Undefined name 'BetStatus' • lib/app/views/records/bet_record_page.dart:598:24 • undefined_identifier
+   info • Use 'const' with the constructor to improve performance • lib/app/views/records/rebate_page.dart:134:13 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/records/rebate_page.dart:135:25 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/share/referral_reward_page.dart:138:13 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/share/referral_reward_page.dart:139:25 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/share/referral_reward_page.dart:566:13 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/share/referral_reward_page.dart:567:25 • prefer_const_literals_to_create_immutables
+   info • Use 'const' with the constructor to improve performance • lib/app/views/share/referral_reward_page.dart:648:12 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/share/referral_reward_page.dart:649:14 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/share/referral_reward_page.dart:651:16 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/share/referral_reward_page.dart:653:21 • prefer_const_literals_to_create_immutables
+  error • The getter 'displayName' isn't defined for the type 'RewardStatus' • lib/app/views/share/referral_reward_page.dart:835:42 • undefined_getter
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/share/referral_reward_page.dart:941:7 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/share/referral_reward_page.dart:945:7 • use_build_context_synchronously
+   info • The declaration '_claimReward' isn't referenced • lib/app/views/share/referral_reward_page.dart:952:16 • unused_element
+  error • The method 'claimReward' isn't defined for the type 'ReferralService' • lib/app/views/share/referral_reward_page.dart:954:46 • undefined_method
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/share/referral_reward_page.dart:956:9 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/share/referral_reward_page.dart:961:9 • use_build_context_synchronously
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/share/referral_reward_page.dart:966:7 • use_build_context_synchronously
+   info • The declaration '_shareReferralCode' isn't referenced • lib/app/views/share/referral_reward_page.dart:973:8 • unused_element
+   info • The declaration '_showReferralDetail' isn't referenced • lib/app/views/share/referral_reward_page.dart:989:8 • unused_element
+  error • Undefined class 'ReferralUser' • lib/app/views/share/referral_reward_page.dart:989:28 • undefined_class
+  error • Undefined class 'ReferralUser' • lib/app/views/share/referral_reward_page.dart:998:36 • undefined_class
+   info • Use 'const' with the constructor to improve performance • lib/app/views/share/referral_reward_page.dart:1029:17 • prefer_const_constructors
+warning • Unused import: '../../data/models/betting_models.dart' • lib/app/views/sports/sports_data_page.dart:3:8 • unused_import
+  error • The name 'MatchInfo' isn't a type, so it can't be used as a type argument • lib/app/views/sports/sports_data_page.dart:19:8 • non_type_as_type_argument
+  error • The name 'MatchInfo' isn't a type, so it can't be used as a type argument • lib/app/views/sports/sports_data_page.dart:20:8 • non_type_as_type_argument
+  error • The name 'MatchInfo' isn't a type, so it can't be used as a type argument • lib/app/views/sports/sports_data_page.dart:21:8 • non_type_as_type_argument
+  error • Too many positional arguments: 0 expected, but 1 found • lib/app/views/sports/sports_data_page.dart:33:38 • extra_positional_arguments
+  error • The method 'getLiveMatches' isn't defined for the type 'BettingService' • lib/app/views/sports/sports_data_page.dart:48:25 • undefined_method
+  error • The method 'getUpcomingMatches' isn't defined for the type 'BettingService' • lib/app/views/sports/sports_data_page.dart:49:25 • undefined_method
+  error • The method 'getPopularMatches' isn't defined for the type 'BettingService' • lib/app/views/sports/sports_data_page.dart:50:25 • undefined_method
+  error • The name 'MatchInfo' isn't a type, so it can't be used as a type argument • lib/app/views/sports/sports_data_page.dart:54:43 • non_type_as_type_argument
+  error • The name 'MatchInfo' isn't a type, so it can't be used as a type argument • lib/app/views/sports/sports_data_page.dart:55:47 • non_type_as_type_argument
+  error • The name 'MatchInfo' isn't a type, so it can't be used as a type argument • lib/app/views/sports/sports_data_page.dart:56:46 • non_type_as_type_argument
+  error • The name 'MatchInfo' isn't a type, so it can't be used as a type argument • lib/app/views/sports/sports_data_page.dart:152:31 • non_type_as_type_argument
+   info • Unnecessary braces in a string interpolation • lib/app/views/sports/sports_data_page.dart:167:18 • unnecessary_brace_in_string_interps
+  error • The name 'MatchInfo' isn't a type, so it can't be used as a type argument • lib/app/views/sports/sports_data_page.dart:191:8 • non_type_as_type_argument
+  error • The name 'MatchInfo' isn't a type, so it can't be used as a type argument • lib/app/views/sports/sports_data_page.dart:191:39 • non_type_as_type_argument
+  error • The property 'category' can't be unconditionally accessed because the receiver can be 'null' • lib/app/views/sports/sports_data_page.dart:195:43 • unchecked_use_of_nullable_value
+  error • Undefined class 'MatchInfo' • lib/app/views/sports/sports_data_page.dart:198:26 • undefined_class
+  error • Undefined class 'MatchInfo' • lib/app/views/sports/sports_data_page.dart:222:28 • undefined_class
+  error • Undefined class 'MatchInfo' • lib/app/views/sports/sports_data_page.dart:277:25 • undefined_class
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:345:35 • undefined_identifier
+  error • Undefined class 'MatchInfo' • lib/app/views/sports/sports_data_page.dart:411:31 • undefined_class
+  error • The body might complete normally, causing 'null' to be returned, but the return type, 'Color', is a potentially non-nullable type • lib/app/views/sports/sports_data_page.dart:487:9 • body_might_complete_normally
+  error • Undefined class 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:487:25 • undefined_class
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:489:12 • undefined_identifier
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:491:12 • undefined_identifier
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:493:12 • undefined_identifier
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:495:12 • undefined_identifier
+  error • The body might complete normally, causing 'null' to be returned, but the return type, 'IconData', is a potentially non-nullable type • lib/app/views/sports/sports_data_page.dart:500:12 • body_might_complete_normally
+  error • Undefined class 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:500:27 • undefined_class
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:502:12 • undefined_identifier
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:504:12 • undefined_identifier
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:506:12 • undefined_identifier
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:508:12 • undefined_identifier
+  error • The body might complete normally, causing 'null' to be returned, but the return type, 'String', is a potentially non-nullable type • lib/app/views/sports/sports_data_page.dart:513:10 • body_might_complete_normally
+  error • Undefined class 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:513:25 • undefined_class
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:515:12 • undefined_identifier
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:517:12 • undefined_identifier
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:519:12 • undefined_identifier
+  error • Undefined name 'MatchStatus' • lib/app/views/sports/sports_data_page.dart:521:12 • undefined_identifier
+  error • Undefined class 'MatchInfo' • lib/app/views/sports/sports_data_page.dart:545:23 • undefined_class
+  error • Undefined class 'BettingOption' • lib/app/views/sports/sports_data_page.dart:545:40 • undefined_class
+  error • The getter 'currentUser' isn't defined for the type 'AuthProvider' • lib/app/views/vip/vip_exclusive_services_page.dart:33:35 • undefined_getter
+  error • Expected an identifier • lib/app/views/vip/vip_exclusive_services_page.dart:391:51 • missing_identifier
+  error • Expected to find ']' • lib/app/views/vip/vip_exclusive_services_page.dart:392:51 • expected_token
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_exclusive_services_page.dart:415:23 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_exclusive_services_page.dart:420:23 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_exclusive_services_page.dart:582:18 • prefer_const_constructors
+   info • Use 'const' literals as arguments to constructors of '@immutable' classes • lib/app/views/vip/vip_exclusive_services_page.dart:584:21 • prefer_const_literals_to_create_immutables
+   info • Unnecessary use of string interpolation • lib/app/views/vip/vip_levels_comparison_page.dart:372:49 • unnecessary_string_interpolations
+   info • Unnecessary use of string interpolation • lib/app/views/vip/vip_levels_comparison_page.dart:382:55 • unnecessary_string_interpolations
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_levels_comparison_page.dart:574:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_levels_comparison_page.dart:586:17 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_levels_comparison_page.dart:598:17 • prefer_const_constructors
+warning • Unused import: 'package:material_design_icons_flutter/material_design_icons_flutter.dart' • lib/app/views/vip/vip_page.dart:2:8 • unused_import
+  error • The getter 'currentUser' isn't defined for the type 'AuthProvider' • lib/app/views/vip/vip_page.dart:46:35 • undefined_getter
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_page.dart:192:28 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_page.dart:376:28 • prefer_const_constructors
+  error • The getter 'type' isn't defined for the type 'VipExchangeItem' • lib/app/views/vip/vip_page.dart:444:43 • undefined_getter
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_page.dart:717:13 • prefer_const_constructors
+  error • Expected an identifier • lib/app/views/vip/vip_page.dart:742:46 • missing_identifier
+  error • Expected to find ']' • lib/app/views/vip/vip_page.dart:743:46 • expected_token
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/vip/vip_page.dart:776:30 • use_build_context_synchronously
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_page.dart:809:13 • prefer_const_constructors
+   info • Don't use 'BuildContext's across async gaps • lib/app/views/vip/vip_page.dart:886:30 • use_build_context_synchronously
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_page.dart:918:13 • prefer_const_constructors
+   info • Use 'const' with the constructor to improve performance • lib/app/views/vip/vip_page.dart:1070:20 • prefer_const_constructors
+  error • The body might complete normally, causing 'null' to be returned, but the return type, 'IconData', is a potentially non-nullable type • lib/app/views/vip/vip_page.dart:1102:12 • body_might_complete_normally
+  error • Undefined class 'ExchangeType' • lib/app/views/vip/vip_page.dart:1102:29 • undefined_class
+  error • Undefined name 'ExchangeType' • lib/app/views/vip/vip_page.dart:1104:12 • undefined_identifier
+  error • Undefined name 'ExchangeType' • lib/app/views/vip/vip_page.dart:1106:12 • undefined_identifier
+  error • Undefined name 'ExchangeType' • lib/app/views/vip/vip_page.dart:1108:12 • undefined_identifier
+  error • Undefined name 'ExchangeType' • lib/app/views/vip/vip_page.dart:1110:12 • undefined_identifier
+  error • Undefined name 'ExchangeType' • lib/app/views/vip/vip_page.dart:1112:12 • undefined_identifier
+   info • The declaration '_refreshData' isn't referenced • lib/app/views/vip/vip_page.dart:1147:16 • unused_element
+   info • The declaration '_showLevelComparison' isn't referenced • lib/app/views/vip/vip_page.dart:1153:8 • unused_element
+   info • The declaration '_showPointsDetail' isn't referenced • lib/app/views/vip/vip_page.dart:1158:8 • unused_element
+   info • The declaration '_showExclusiveServices' isn't referenced • lib/app/views/vip/vip_page.dart:1163:8 • unused_element
+  error • The getter 'currentUser' isn't defined for the type 'AuthProvider' • lib/app/views/vip/vip_points_detail_page.dart:51:35 • undefined_getter
+  error • The getter 'currentUser' isn't defined for the type 'AuthProvider' • lib/app/views/vip/vip_points_detail_page.dart:80:35 • undefined_getter
+warning • Unused import: 'package:kaiyun_sports_app/main.dart' • test/widget_test.dart:11:8 • unused_import
+  error • The name 'MyApp' isn't a class • test/widget_test.dart:16:35 • creation_with_non_type
+
