@@ -135,15 +135,15 @@ class _ReferralRewardPageState extends State<ReferralRewardPage>
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.group_add,
                   color: AppColors.primary,
                   size: 24,
                 ),
-                const SizedBox(width: 8),
-                const Text(
+                SizedBox(width: 8),
+                Text(
                   '推荐总览',
                   style: TextStyle(
                     fontSize: 18,
@@ -563,15 +563,15 @@ class _ReferralRewardPageState extends State<ReferralRewardPage>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
+            const Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.share,
                   color: AppColors.primary,
                   size: 24,
                 ),
-                const SizedBox(width: 8),
-                const Text(
+                SizedBox(width: 8),
+                Text(
                   '我的推荐码',
                   style: TextStyle(
                     fontSize: 18,
@@ -645,37 +645,37 @@ class _ReferralRewardPageState extends State<ReferralRewardPage>
   }
   
   Widget _buildReferralRules() {
-    return Card(
+    return const Card(
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               '推荐规则',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 12),
-            const Text(
+            SizedBox(height: 12),
+            Text(
               '1. 分享您的推荐码给朋友，朋友注册时输入推荐码',
               style: TextStyle(height: 1.5),
             ),
-            const Text(
+            Text(
               '2. 朋友成功注册后，您将获得注册奖励',
               style: TextStyle(height: 1.5),
             ),
-            const Text(
+            Text(
               '3. 朋友首次充值后，您将获得额外奖励',
               style: TextStyle(height: 1.5),
             ),
-            const Text(
+            Text(
               '4. 朋友投注时，您将获得持续的分成奖励',
               style: TextStyle(height: 1.5),
             ),
-            const Text(
+            Text(
               '5. 推荐奖励支持三级分成，越多朋友推荐越多奖励',
               style: TextStyle(height: 1.5),
             ),
@@ -832,7 +832,7 @@ class _ReferralRewardPageState extends State<ReferralRewardPage>
                     ),
                     ...RewardStatus.values.map((status) => DropdownMenuItem(
                       value: status,
-                      child: Text(status.displayName),
+                      child: Text(status.toString().split('.').last),
                     )),
                   ],
                   onChanged: (value) {
@@ -946,153 +946,5 @@ class _ReferralRewardPageState extends State<ReferralRewardPage>
         SnackBar(content: Text('筛选失败: $e')),
       );
     }
-  }
-  
-  // 添加奖励操作方法
-  Future<void> _claimReward(ReferralReward reward) async {
-    try {
-      final success = await _referralService.claimReward(reward.id);
-      if (success) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('奖励领取成功！')),
-        );
-        _loadData(); // 刷新数据
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('领取失败，请重试')),
-        );
-      }
-    } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('领取失败: $e')),
-      );
-    }
-  }
-  
-  // 分享推荐码
-  void _shareReferralCode() {
-    if (_referralCode == null) return;
-    
-    final referralLink = _referralService.getReferralLink(_referralCode!.code);
-    final shareText = '邀请您加入开云体育，使用我的推荐码：${_referralCode!.code}\n或点击链接：$referralLink';
-    
-    // 这里可以使用 share_plus 插件进行分享
-    // Share.share(shareText);
-    
-    _copyToClipboard(shareText);
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text('分享内容已复制到剪贴板')),
-    );
-  }
-  
-  // 查看推荐详情
-  void _showReferralDetail(ReferralUser referral) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: Colors.transparent,
-      builder: (context) => _buildReferralDetailSheet(referral),
-    );
-  }
-  
-  Widget _buildReferralDetailSheet(ReferralUser referral) {
-    return Container(
-      decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      child: DraggableScrollableSheet(
-        initialChildSize: 0.6,
-        maxChildSize: 0.9,
-        minChildSize: 0.4,
-        builder: (context, scrollController) {
-          return SingleChildScrollView(
-            controller: scrollController,
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // 拖拽指示器
-                Center(
-                  child: Container(
-                    width: 40,
-                    height: 4,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(2),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 20),
-                
-                // 标题
-                Text(
-                  '推荐详情',
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                
-                // 用户信息
-                _buildDetailRow('用户名', referral.username),
-                _buildDetailRow('注册时间', _formatDateTime(referral.registerTime)),
-                _buildDetailRow('状态', referral.isActive ? '活跃' : '非活跃'),
-                _buildDetailRow('总奖励', '¥${referral.totalReward.toStringAsFixed(2)}'),
-                _buildDetailRow('推荐层级', '第${referral.level}级'),
-                if (referral.lastLoginTime != null)
-                  _buildDetailRow('最后登录', _formatDateTime(referral.lastLoginTime!)),
-                
-                const SizedBox(height: 20),
-                
-                // 操作按钮
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () => Navigator.pop(context),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.primary,
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                    ),
-                    child: const Text('关闭'),
-                  ),
-                ),
-              ],
-            ),
-          );
-        },
-      ),
-    );
-  }
-  
-  Widget _buildDetailRow(String label, String value) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SizedBox(
-            width: 80,
-            child: Text(
-              label,
-              style: const TextStyle(
-                color: AppColors.textSecondary,
-              ),
-            ),
-          ),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Text(
-              value,
-              style: const TextStyle(
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
   }
 }

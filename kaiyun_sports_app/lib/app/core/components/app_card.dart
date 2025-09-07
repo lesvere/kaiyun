@@ -20,7 +20,7 @@ class AppCard extends StatelessWidget {
   final double elevation;
 
   const AppCard({
-    Key? key,
+    super.key,
     this.child,
     this.padding,
     this.margin,
@@ -35,7 +35,7 @@ class AppCard extends StatelessWidget {
     this.type = AppCardType.standard,
     this.enabled = true,
     this.elevation = 2.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -150,17 +150,17 @@ class AppCard extends StatelessWidget {
         color: AppColors.primary.withOpacity(0.1),
         width: 1,
       ),
-      boxShadow: boxShadow ?? [
+      boxShadow: boxShadow ?? const [
         BoxShadow(
-          color: AppColors.primary.withOpacity(0.08),
+          color: Color.fromRGBO(24, 144, 255, 0.08),
           blurRadius: 16,
-          offset: const Offset(0, 4),
+          offset: Offset(0, 4),
           spreadRadius: 0,
         ),
         BoxShadow(
-          color: Colors.black.withOpacity(0.04),
+          color: Color.fromRGBO(0, 0, 0, 0.04),
           blurRadius: 4,
-          offset: const Offset(0, 2),
+          offset: Offset(0, 2),
           spreadRadius: 0,
         ),
       ],
@@ -170,7 +170,7 @@ class AppCard extends StatelessWidget {
   /// VIP卡片样式 - 金色渐变
   BoxDecoration _buildVipDecoration() {
     return BoxDecoration(
-      gradient: gradient ?? LinearGradient(
+      gradient: gradient ?? const LinearGradient(
         colors: [
           AppColors.vipGold,
           AppColors.vipGoldDark,
@@ -180,11 +180,11 @@ class AppCard extends StatelessWidget {
       ),
       borderRadius: BorderRadius.circular(borderRadius),
       border: border,
-      boxShadow: boxShadow ?? [
+      boxShadow: boxShadow ?? const [
         BoxShadow(
-          color: AppColors.vipGold.withOpacity(0.3),
+          color: Color.fromRGBO(212, 175, 55, 0.3),
           blurRadius: 16,
-          offset: const Offset(0, 8),
+          offset: Offset(0, 8),
           spreadRadius: 0,
         ),
       ],
@@ -194,7 +194,7 @@ class AppCard extends StatelessWidget {
   /// 福利中心卡片样式 - 蓝色渐变
   BoxDecoration _buildBenefitDecoration() {
     return BoxDecoration(
-      gradient: gradient ?? LinearGradient(
+      gradient: gradient ?? const LinearGradient(
         colors: [
           AppColors.benefitBlue,
           AppColors.primary,
@@ -204,11 +204,11 @@ class AppCard extends StatelessWidget {
       ),
       borderRadius: BorderRadius.circular(borderRadius),
       border: border,
-      boxShadow: boxShadow ?? [
+      boxShadow: boxShadow ?? const [
         BoxShadow(
-          color: AppColors.benefitBlue.withOpacity(0.3),
+          color: Color.fromRGBO(77, 182, 248, 0.3),
           blurRadius: 16,
-          offset: const Offset(0, 8),
+          offset: Offset(0, 8),
           spreadRadius: 0,
         ),
       ],
@@ -235,11 +235,11 @@ class AppCard extends StatelessWidget {
 
   /// 获取默认阴影
   List<BoxShadow> _getDefaultShadow() {
-    return [
+    return const [
       BoxShadow(
-        color: Colors.black.withOpacity(0.08),
+        color: Color.fromRGBO(0, 0, 0, 0.08),
         blurRadius: 8,
-        offset: const Offset(0, 2),
+        offset: Offset(0, 2),
         spreadRadius: 0,
       ),
     ];
@@ -247,17 +247,17 @@ class AppCard extends StatelessWidget {
 
   /// 获取浮动阴影
   List<BoxShadow> _getElevatedShadow() {
-    return [
+    return const [
       BoxShadow(
-        color: Colors.black.withOpacity(0.12),
+        color: Color.fromRGBO(0, 0, 0, 0.12),
         blurRadius: 16,
-        offset: const Offset(0, 4),
+        offset: Offset(0, 4),
         spreadRadius: 0,
       ),
       BoxShadow(
-        color: Colors.black.withOpacity(0.08),
+        color: Color.fromRGBO(0, 0, 0, 0.08),
         blurRadius: 8,
-        offset: const Offset(0, 2),
+        offset: Offset(0, 2),
         spreadRadius: 0,
       ),
     ];
@@ -265,7 +265,7 @@ class AppCard extends StatelessWidget {
 
   /// 获取默认渐变
   Gradient _getDefaultGradient() {
-    return LinearGradient(
+    return const LinearGradient(
       colors: [
         AppColors.blueGradientStart,
         AppColors.blueGradientEnd,
@@ -430,7 +430,7 @@ class AppCardContent extends StatelessWidget {
   final MainAxisAlignment mainAxisAlignment;
 
   const AppCardContent({
-    Key? key,
+    super.key,
     this.title,
     this.subtitle,
     this.description,
@@ -439,7 +439,7 @@ class AppCardContent extends StatelessWidget {
     this.custom,
     this.crossAxisAlignment = CrossAxisAlignment.start,
     this.mainAxisAlignment = MainAxisAlignment.start,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

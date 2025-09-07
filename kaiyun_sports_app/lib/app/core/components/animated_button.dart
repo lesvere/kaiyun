@@ -201,7 +201,7 @@ class _AnimatedButtonState extends State<AnimatedButton>
                                 valueColor: AlwaysStoppedAnimation<Color>(textColor),
                               ),
                             )
-                          else if (widget.icon != null) ..[
+                          else if (widget.icon != null) ...[
                             Icon(
                               widget.icon,
                               color: isDisabled ? textColor.withOpacity(0.5) : textColor,

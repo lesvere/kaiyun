@@ -1,6 +1,7 @@
 import '../api/api_service.dart';
 import '../api/api_config.dart';
 import '../models/betting_models.dart';
+import '../models/sports_models.dart';
 
 class BettingService {
   final ApiService _apiService = ApiService();
@@ -47,7 +48,7 @@ class BettingService {
   Future<List<BetOption>> getAvailableOptions(String matchId) async {
     try {
       final response = await _apiService.get(
-        '${ApiConfig.betOptions}?matchId=$matchId',
+        '${ApiConfig.betSlip}?matchId=$matchId',
       );
       
       final result = _apiService.handleResponse(response);
@@ -63,7 +64,7 @@ class BettingService {
   Future<Map<String, dynamic>> cancelBet(String betId) async {
     try {
       final response = await _apiService.post(
-        ApiConfig.cancelBet,
+        ApiConfig.betCancel,
         data: {'betId': betId},
       );
       
@@ -78,5 +79,20 @@ class BettingService {
         'message': _apiService.handleError(e),
       };
     }
+  }
+
+  Future<List<MatchInfo>> getLiveMatches() async {
+    await Future.delayed(const Duration(seconds: 1));
+    return [];
+  }
+
+  Future<List<MatchInfo>> getUpcomingMatches() async {
+    await Future.delayed(const Duration(seconds: 1));
+    return [];
+  }
+
+  Future<List<MatchInfo>> getPopularMatches() async {
+    await Future.delayed(const Duration(seconds: 1));
+    return [];
   }
 }

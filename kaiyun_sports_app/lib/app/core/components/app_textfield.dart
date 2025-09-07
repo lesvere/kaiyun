@@ -41,7 +41,7 @@ class AppTextField extends StatefulWidget {
   final String? Function(String?)? validator;
 
   const AppTextField({
-    Key? key,
+    super.key,
     this.label,
     this.hintText,
     this.helperText,
@@ -76,7 +76,7 @@ class AppTextField extends StatefulWidget {
     this.focusedBorder,
     this.errorBorder,
     this.validator,
-  }) : super(key: key);
+  });
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -186,11 +186,11 @@ class _AppTextFieldState extends State<AppTextField> {
       decoration: BoxDecoration(
         color: AppColors.sectionBackground,
         borderRadius: BorderRadius.circular(widget.borderRadius),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Color.fromRGBO(0, 0, 0, 0.05),
             blurRadius: 4,
-            offset: const Offset(0, 2),
+            offset: Offset(0, 2),
           ),
         ],
       ),
@@ -343,7 +343,7 @@ class _AppTextFieldState extends State<AppTextField> {
   OutlineInputBorder _buildBorder() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(widget.borderRadius),
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         color: AppColors.border,
         width: 1,
       ),
@@ -359,7 +359,7 @@ class _AppTextFieldState extends State<AppTextField> {
     }
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(widget.borderRadius),
-      borderSide: BorderSide(
+      borderSide: const BorderSide(
         color: AppColors.border,
         width: 1,
       ),

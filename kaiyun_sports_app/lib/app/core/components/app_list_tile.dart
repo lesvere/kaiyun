@@ -23,7 +23,7 @@ class AppListTile extends StatelessWidget {
   final Widget? custom;
 
   const AppListTile({
-    Key? key,
+    super.key,
     this.title,
     this.subtitle,
     this.description,
@@ -41,7 +41,7 @@ class AppListTile extends StatelessWidget {
     this.dense = false,
     this.threeLine = false,
     this.custom,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -172,7 +172,7 @@ class AppListTile extends StatelessWidget {
             trailing!,
           ] else ...[
             const SizedBox(width: 12),
-            Icon(
+            const Icon(
               Icons.arrow_forward_ios,
               size: 16,
               color: AppColors.iconGray,
@@ -230,7 +230,7 @@ class AppListTile extends StatelessWidget {
   Widget _buildFinancialTile(BuildContext context) {
     return Container(
       padding: padding ?? const EdgeInsets.all(16),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         border: Border(
           left: BorderSide(
             color: AppColors.primary,
@@ -296,7 +296,7 @@ class AppListTile extends StatelessWidget {
             trailing!,
           ] else ...[
             const SizedBox(width: 16),
-            Icon(
+            const Icon(
               Icons.arrow_forward_ios,
               size: 16,
               color: AppColors.iconGray,
@@ -365,11 +365,11 @@ class AppListTile extends StatelessWidget {
 
     List<BoxShadow>? shadows;
     if (type == AppListTileType.card || type == AppListTileType.financial) {
-      shadows = [
+      shadows = const [
         BoxShadow(
-          color: Colors.black.withOpacity(0.05),
+          color: Color.fromRGBO(0, 0, 0, 0.05),
           blurRadius: 4,
-          offset: const Offset(0, 2),
+          offset: Offset(0, 2),
         ),
       ];
     }
@@ -459,8 +459,8 @@ class AppListTileStyles {
       title: name,
       subtitle: status,
       description: description,
-      leading: avatar ?? CircleAvatar(
-        backgroundColor: AppColors.primary.withOpacity(0.1),
+      leading: avatar ?? const CircleAvatar(
+        backgroundColor: Color.fromRGBO(24, 144, 255, 0.1),
         child: Icon(Icons.person, color: AppColors.primary),
       ),
       trailing: trailing,

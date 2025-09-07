@@ -58,7 +58,7 @@ class RebateService {
     DateTime? endDate,
   }) async {
     try {
-      final response = await _apiService.get('/rebate/records', {
+      final response = await _apiService.get('/rebate/records', queryParameters: {
         'page': page,
         'page_size': pageSize,
         'type': type?.toString().split('.').last,
@@ -93,7 +93,7 @@ class RebateService {
     required String period,
   }) async {
     try {
-      final response = await _apiService.post('/rebate/apply', {
+      final response = await _apiService.post('/rebate/apply', data: {
         'category': category,
         'bet_amount': betAmount,
         'period': period,
@@ -111,7 +111,6 @@ class RebateService {
       await _apiService.post('/rebate/auto-process');
     } catch (e) {
       // 静默处理错误
-      print('Auto rebate processing error: $e');
     }
   }
   

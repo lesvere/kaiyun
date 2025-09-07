@@ -26,7 +26,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool transparent;
 
   const AppAppBar({
-    Key? key,
+    super.key,
     this.title,
     this.titleWidget,
     this.actions,
@@ -46,7 +46,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.foregroundColor,
     this.showBorder = false,
     this.transparent = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
         centerTitle: centerTitle,
         leadingWidth: leadingWidth,
         toolbarHeight: toolbarHeight,
-        systemOverlayStyle: systemOverlayStyle ?? _getSystemOverlayStyle(),
+        systemUiOverlayStyle: systemOverlayStyle ?? _getSystemOverlayStyle(),
         shape: showBorder ? const Border(
           bottom: BorderSide(
             color: AppColors.divider,
@@ -84,7 +84,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
           gradient: gradient ?? _getDefaultGradient(),
         );
       case AppAppBarType.branded:
-        return BoxDecoration(
+        return const BoxDecoration(
           gradient: LinearGradient(
             colors: [
               AppColors.primary,
@@ -97,11 +97,11 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
       case AppAppBarType.financial:
         return BoxDecoration(
           color: backgroundColor ?? Colors.white,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
-              color: Colors.black.withOpacity(0.05),
+              color: Color.fromRGBO(0, 0, 0, 0.05),
               blurRadius: 8,
-              offset: const Offset(0, 2),
+              offset: Offset(0, 2),
             ),
           ],
         );
@@ -171,7 +171,7 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   Gradient _getDefaultGradient() {
-    return LinearGradient(
+    return const LinearGradient(
       colors: [
         AppColors.blueGradientStart,
         AppColors.blueGradientEnd,
@@ -313,7 +313,7 @@ class AppAppBarStyles {
           onSubmitted: onSubmitted,
           decoration: InputDecoration(
             hintText: hintText,
-            hintStyle: TextStyle(
+            hintStyle: const TextStyle(
               color: AppColors.textSecondary,
               fontSize: 14,
             ),
@@ -434,7 +434,7 @@ class AppBottomAppBar extends StatelessWidget {
   final bool showUnselectedLabels;
 
   const AppBottomAppBar({
-    Key? key,
+    super.key,
     required this.items,
     this.currentIndex = 0,
     this.onTap,
@@ -442,7 +442,7 @@ class AppBottomAppBar extends StatelessWidget {
     this.elevation = 8.0,
     this.showSelectedLabels = true,
     this.showUnselectedLabels = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

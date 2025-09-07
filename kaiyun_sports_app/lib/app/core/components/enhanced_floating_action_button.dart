@@ -55,8 +55,6 @@ class _EnhancedFloatingActionButtonState extends State<EnhancedFloatingActionBut
   late Animation<double> _pulseAnimation;
   late Animation<double> _expandAnimation;
   
-  bool _isPressed = false;
-  
   @override
   void initState() {
     super.initState();
@@ -138,10 +136,6 @@ class _EnhancedFloatingActionButtonState extends State<EnhancedFloatingActionBut
   
   void _onTapDown(TapDownDetails details) {
     if (widget.onPressed != null) {
-      setState(() {
-        _isPressed = true;
-      });
-      
       if (widget.enableScaleAnimation) {
         _scaleController.forward();
       }
@@ -156,10 +150,6 @@ class _EnhancedFloatingActionButtonState extends State<EnhancedFloatingActionBut
   
   void _onTapUp(TapUpDetails details) {
     if (widget.onPressed != null) {
-      setState(() {
-        _isPressed = false;
-      });
-      
       if (widget.enableScaleAnimation) {
         _scaleController.reverse();
       }
@@ -173,10 +163,6 @@ class _EnhancedFloatingActionButtonState extends State<EnhancedFloatingActionBut
   }
   
   void _onTapCancel() {
-    setState(() {
-      _isPressed = false;
-    });
-    
     if (widget.enableScaleAnimation) {
       _scaleController.reverse();
     }
@@ -266,7 +252,7 @@ class _EnhancedFloatingActionButtonState extends State<EnhancedFloatingActionBut
                 );
               },
             );
-          }).toList(),
+          }),
         
         // 主按钮
         _buildNormalFAB(),
@@ -328,10 +314,10 @@ class EnhancedFABStyles {
     return EnhancedFloatingActionButton(
       onPressed: onPressed,
       backgroundColor: AppColors.success,
-      child: const Icon(Icons.account_balance_wallet),
       tooltip: '快速存款',
       enableScaleAnimation: true,
       enablePulseAnimation: true,
+      child: const Icon(Icons.account_balance_wallet),
     );
   }
   
@@ -365,11 +351,11 @@ class EnhancedFABStyles {
           backgroundColor: AppColors.warning,
         ),
       ],
+      tooltip: isExpanded ? '关闭菜单' : '打开菜单',
+      enableRotationAnimation: true,
       child: Icon(
         isExpanded ? Icons.close : Icons.menu,
       ),
-      enableRotationAnimation: true,
-      tooltip: isExpanded ? '关闭菜单' : '打开菜单',
     );
   }
   
@@ -382,8 +368,8 @@ class EnhancedFABStyles {
       onPressed: onPressed,
       type: FloatingActionButtonType.morphing,
       isExpanded: isExpanded,
-      child: const Icon(Icons.add),
       tooltip: '快速操作',
+      child: const Icon(Icons.add),
     );
   }
 }

@@ -30,7 +30,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
     
     try {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
-      final userId = authProvider.currentUser?.id ?? '';
+      final userId = authProvider.user?.id ?? '';
       
       if (userId.isNotEmpty) {
         _vipUserInfo = await _vipService.getVipUserInfo(userId);
@@ -65,7 +65,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
         isAvailable: _vipUserInfo != null && _vipUserInfo!.currentLevel.level >= 3,
         requiredLevel: VipLevel.gold,
         category: ServiceCategory.support,
-        features: [
+        features: const [
           '专属客服代表',
           '优先处理问题',
           '即时在线解答',
@@ -80,7 +80,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
         isAvailable: _vipUserInfo != null && _vipUserInfo!.currentLevel.level >= 2,
         requiredLevel: VipLevel.silver,
         category: ServiceCategory.financial,
-        features: [
+        features: const [
           '2小时快速到账',
           '无手续费',
           '优先处理',
@@ -95,7 +95,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
         isAvailable: _vipUserInfo != null && _vipUserInfo!.currentLevel.level >= 1,
         requiredLevel: VipLevel.bronze,
         category: ServiceCategory.reward,
-        features: [
+        features: const [
           '生日当天可领取',
           '金额随等级递增',
           '无投注要求',
@@ -110,7 +110,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
         isAvailable: _vipUserInfo != null && _vipUserInfo!.currentLevel.level >= 3,
         requiredLevel: VipLevel.gold,
         category: ServiceCategory.promotion,
-        features: [
+        features: const [
           '高价值活动',
           '独家参与机会',
           '优先通知',
@@ -125,7 +125,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
         isAvailable: _vipUserInfo != null && _vipUserInfo!.currentLevel.level >= 4,
         requiredLevel: VipLevel.diamond,
         category: ServiceCategory.premium,
-        features: [
+        features: const [
           '专属客户经理',
           '个性化服务',
           '投注建议和分析',
@@ -140,7 +140,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
         isAvailable: _vipUserInfo != null && _vipUserInfo!.currentLevel.level >= 5,
         requiredLevel: VipLevel.black,
         category: ServiceCategory.exclusive,
-        features: [
+        features: const [
           '奢华实物礼品',
           '个性化定制',
           '免费快递配送',
@@ -155,7 +155,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
         isAvailable: _vipUserInfo != null && _vipUserInfo!.currentLevel.level >= 5,
         requiredLevel: VipLevel.black,
         category: ServiceCategory.exclusive,
-        features: [
+        features: const [
           '高端线下派对',
           '体育赛事观看',
           '交通住宿全包',
@@ -388,7 +388,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
                             ),
                           ),
                         ),
-                        if (!service.isAvailable) ..[
+                        if (!service.isAvailable) ...[
                           const SizedBox(width: 8),
                           Container(
                             padding: const EdgeInsets.symmetric(
@@ -412,12 +412,12 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
                   ],
                 ),
                 trailing: service.isAvailable
-                    ? Icon(
+                    ? const Icon(
                         Icons.check_circle,
                         color: AppColors.success,
                         size: 20,
                       )
-                    : Icon(
+                    : const Icon(
                         Icons.lock,
                         color: AppColors.textSecondary,
                         size: 20,
@@ -579,10 +579,10 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('个人客户经理'),
-        content: Column(
+        content: const Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const CircleAvatar(
+            CircleAvatar(
               radius: 40,
               backgroundColor: AppColors.primary,
               child: Icon(
@@ -591,11 +591,11 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(height: 16),
-            const Text('您的专属客户经理'),
-            const Text('李经理'),
-            const SizedBox(height: 8),
-            const Text('服务时间：9:00-21:00'),
+            SizedBox(height: 16),
+            Text('您的专属客户经理'),
+            Text('李经理'),
+            SizedBox(height: 8),
+            Text('服务时间：9:00-21:00'),
           ],
         ),
         actions: [
@@ -717,7 +717,7 @@ class ExclusiveService {
   final ServiceCategory category;
   final List<String> features;
 
-  ExclusiveService({
+  const ExclusiveService({
     required this.id,
     required this.name,
     required this.description,

@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../../core/theme/app_colors.dart';
 import '../../data/models/vip_models.dart';
 import '../../data/services/vip_service.dart';
 import '../../providers/auth_provider.dart';
 import 'package:provider/provider.dart';
+
+enum ExchangeType {
+  cash,
+  bonus,
+  freebet,
+  service,
+  merchandise,
+}
 
 class VipPage extends StatefulWidget {
   const VipPage({super.key});
@@ -43,7 +50,7 @@ class _VipPageState extends State<VipPage>
     
     try {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
-      final userId = authProvider.currentUser?.id ?? '';
+      final userId = authProvider.user?.id ?? '';
       
       if (userId.isNotEmpty) {
         final results = await Future.wait([
@@ -189,7 +196,7 @@ class _VipPageState extends State<VipPage>
                       color: Colors.white.withOpacity(0.2),
                       shape: BoxShape.circle,
                     ),
-                    child: Icon(
+                    child: const Icon(
                       Icons.diamond,
                       size: 32,
                       color: Colors.white,
@@ -373,7 +380,7 @@ class _VipPageState extends State<VipPage>
                   const SizedBox(height: 4),
                   Text(
                     '价值: ${benefit.value}${benefit.unit ?? ''}',
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: AppColors.primary,
                       fontWeight: FontWeight.w600,
                     ),
@@ -440,8 +447,8 @@ class _VipPageState extends State<VipPage>
                     color: AppColors.primary.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
-                  child: Icon(
-                    _getExchangeIcon(item.type),
+                  child: const Icon(
+                    Icons.star,
                     size: 30,
                     color: AppColors.primary,
                   ),
@@ -714,7 +721,7 @@ class _VipPageState extends State<VipPage>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('确定要激活以下特权吗？'),
+            const Text('确定要激活以下特权吗？'),
             const SizedBox(height: 12),
             Container(
               padding: const EdgeInsets.all(12),
@@ -739,7 +746,7 @@ class _VipPageState extends State<VipPage>
                       color: AppColors.textSecondary,
                     ),
                   ),
-                  if (benefit.value != null) ..[
+                  if (benefit.value != null) ...[
                     const SizedBox(height: 4),
                     Text(
                       '价值: ${benefit.value}${benefit.unit ?? ''}',
@@ -748,7 +755,7 @@ class _VipPageState extends State<VipPage>
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                  ],
+                  ]
                 ],
               ),
             ),
@@ -806,7 +813,7 @@ class _VipPageState extends State<VipPage>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('确定要兑换以下商品吗？'),
+            const Text('确定要兑换以下商品吗？'),
             const SizedBox(height: 12),
             Container(
               padding: const EdgeInsets.all(12),
@@ -915,7 +922,7 @@ class _VipPageState extends State<VipPage>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('确定要领取以下奖励吗？'),
+            const Text('确定要领取以下奖励吗？'),
             const SizedBox(height: 12),
             Container(
               padding: const EdgeInsets.all(12),
@@ -1144,7 +1151,7 @@ class _VipPageState extends State<VipPage>
   }
   
   // 刷新数据
-  Future<void> _refreshData() async {
+  void _refreshData() async {
     await _loadVipData();
     _showMessage('刷新成功');
   }

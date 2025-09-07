@@ -1,6 +1,5 @@
 import '../api/api_service.dart';
 import '../models/vip_models.dart';
-import '../models/user_model.dart';
 
 /// VIP服务类
 class VipService {
@@ -358,59 +357,6 @@ class VipService {
       return _getDefaultExchangeItems(userLevel);
     } catch (e) {
       throw Exception('获取兑换商品失败: ${_apiService.handleError(e)}');
-    }
-  }
-
-  /// 获取默认兑换商品
-  List<VipExchangeItem> _getDefaultExchangeItems(VipLevel userLevel) {
-    return [
-      VipExchangeItem(
-        id: 'cash_10',
-        name: '10元现金',
-        description: '直接充值到账户余额',
-        pointsCost: 1000,
-        imageUrl: 'assets/images/cash.png',
-        category: '现金奖励',
-        minLevel: VipLevel.bronze,
-        stock: 100,
-      ),
-      VipExchangeItem(
-        id: 'freebet_50',
-        name: '50元免费投注',
-        description: '可用于任意体育赛事投注',
-        pointsCost: 2500,
-        imageUrl: 'assets/images/freebet.png',
-        category: '投注奖励',
-        minLevel: VipLevel.silver,
-        stock: 50,
-      ),
-      if (userLevel.level >= VipLevel.gold.level)
-        VipExchangeItem(
-          id: 'premium_support',
-          name: '专属客服服务',
-          description: '30天7*24小时专属客服支持',
-          pointsCost: 5000,
-          imageUrl: 'assets/images/support.png',
-          category: '特权服务',
-          minLevel: VipLevel.gold,
-          stock: 20,
-        ),
-    ];
-  }
-
-  /// 计算投注积分
-  double calculateBetPoints(double betAmount) {
-    // 每1元投注获得1积分
-    return betAmount;
-  }
-
-  /// 计算充值积分
-  double calculateDepositPoints(double depositAmount) {
-    // 每10元充值获得1积分
-    return depositAmount / 10;
-  }ms(userLevel);
-    } catch (e) {
-      return _getDefaultExchangeItems(userLevel);
     }
   }
 

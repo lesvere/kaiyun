@@ -131,15 +131,15 @@ class _RebatePageState extends State<RebatePage>
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            Row(
+            const Row(
               children: [
-                const Icon(
+                Icon(
                   Icons.account_balance_wallet,
                   color: AppColors.primary,
                   size: 24,
                 ),
-                const SizedBox(width: 8),
-                const Text(
+                SizedBox(width: 8),
+                Text(
                   '返水总览',
                   style: TextStyle(
                     fontSize: 18,

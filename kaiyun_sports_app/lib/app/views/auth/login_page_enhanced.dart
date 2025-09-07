@@ -98,7 +98,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
         setState(() {
           _errorMessage = '用户名或密码错误';
         });
-        HapticFeedback.notificationFeedback(NotificationFeedbackType.error);
+        HapticFeedback.heavyImpact();
       }
     } finally {
       if (mounted) {
@@ -274,7 +274,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                 ),
                 child: Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.error_outline,
                       color: AppColors.error,
                       size: 18,
@@ -282,7 +282,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                     const SizedBox(width: 8),
                     Text(
                       _errorMessage!,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: AppColors.error,
                         fontSize: 14,
                       ),

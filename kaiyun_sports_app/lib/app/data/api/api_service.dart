@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio_cache_interceptor/dio_cache_interceptor.dart';
-import 'package:dio_certificate_pinning/dio_certificate_pinning.dart';
+import 'package:http_certificate_pinning/http_certificate_pinning.dart';
 import 'package:flutter/foundation.dart';
 import 'api_config.dart';
 import '../../providers/auth_provider.dart';
@@ -19,7 +19,7 @@ class ApiService {
   AuthProvider? _authProvider;
   Timer? _tokenRefreshTimer;
   bool _isRefreshing = false;
-  List<RequestOptions> _pendingRequests = [];
+  final List<RequestOptions> _pendingRequests = [];
   
   // 缓存配置
   final _cacheOptions = CacheOptions(
@@ -43,9 +43,9 @@ class ApiService {
   void _initializeDio() {
     _dio = Dio(BaseOptions(
       baseUrl: ApiConfig.baseUrl,
-      connectTimeout: Duration(milliseconds: ApiConfig.connectTimeout),
-      receiveTimeout: Duration(milliseconds: ApiConfig.receiveTimeout),
-      sendTimeout: Duration(milliseconds: ApiConfig.sendTimeout),
+      connectTimeout: const Duration(milliseconds: ApiConfig.connectTimeout),
+      receiveTimeout: const Duration(milliseconds: ApiConfig.receiveTimeout),
+      sendTimeout: const Duration(milliseconds: ApiConfig.sendTimeout),
       headers: ApiConfig.headers,
       responseType: ResponseType.json,
       contentType: Headers.jsonContentType,
@@ -478,7 +478,7 @@ class ApiService {
   /// 启动Token定时刷新
   void _startTokenRefreshTimer() {
     _tokenRefreshTimer?.cancel();
-    _tokenRefreshTimer = Timer.periodic(Duration(minutes: ApiConfig.tokenRefreshInterval), (timer) async {
+    _tokenRefreshTimer = Timer.periodic(const Duration(minutes: ApiConfig.tokenRefreshInterval), (timer) async {
       if (_authProvider != null && await _authProvider!.getAuthToken() != null) {
         try {
           await _authProvider!.refreshToken();

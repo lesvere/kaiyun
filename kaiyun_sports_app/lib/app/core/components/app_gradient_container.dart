@@ -21,7 +21,7 @@ class AppGradientContainer extends StatelessWidget {
   final Duration animationDuration;
 
   const AppGradientContainer({
-    Key? key,
+    super.key,
     this.child,
     this.padding,
     this.margin,
@@ -37,7 +37,7 @@ class AppGradientContainer extends StatelessWidget {
     this.boxShadow,
     this.animate = false,
     this.animationDuration = const Duration(milliseconds: 300),
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -450,7 +450,7 @@ class AnimatedAppGradientContainer extends StatefulWidget {
   final double? height;
 
   const AnimatedAppGradientContainer({
-    Key? key,
+    super.key,
     this.child,
     this.padding,
     this.margin,
@@ -461,7 +461,7 @@ class AnimatedAppGradientContainer extends StatefulWidget {
     this.autoStart = true,
     this.width,
     this.height,
-  }) : super(key: key);
+  });
 
   @override
   State<AnimatedAppGradientContainer> createState() => _AnimatedAppGradientContainerState();

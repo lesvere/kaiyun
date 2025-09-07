@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import '../../../app/data/services/secure_storage_service.dart';
-import 'error_types.dart';
+import '../error/error_types.dart';
 
 /// 离线数据管理服务
 class OfflineDataManager {

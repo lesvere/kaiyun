@@ -153,8 +153,6 @@ class _HoverEffectState extends State<HoverEffect>
   late Animation<double> _elevationAnimation;
   late Animation<Color?> _colorAnimation;
   
-  bool _isHovered = false;
-  
   @override
   void initState() {
     super.initState();

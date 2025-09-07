@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import '../../core/theme/app_colors.dart';
 import '../../providers/finance_provider.dart';
 import '../../data/models/finance_models.dart';
 import '../../data/services/finance_service.dart';
-import '../components/security_verification_dialog.dart';
 import '../components/transaction_confirm_dialog.dart';
 
 class DepositPage extends StatefulWidget {
@@ -145,7 +143,7 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
             children: [
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.account_balance_wallet,
                     color: Colors.white,
                     size: 20,
@@ -180,7 +178,7 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              if (balance?.lastUpdatedAt != null) ..[
+              if (balance?.lastUpdatedAt != null) ...[
                 const SizedBox(height: 4),
                 Text(
                   '更新时间: ${balance!.lastUpdatedAt.toString().substring(11, 19)}',
@@ -390,15 +388,15 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
               ),
             ),
             const SizedBox(height: 8),
-            Row(
+            const Row(
               children: [
                 Icon(
                   Icons.info_outline,
                   size: 14,
                   color: AppColors.textSecondary,
                 ),
-                const SizedBox(width: 4),
-                const Text(
+                SizedBox(width: 4),
+                Text(
                   '最低存款金额：¥100，最高存款金额：¥50,000',
                   style: TextStyle(
                     fontSize: 11,
@@ -506,11 +504,11 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
                 ),
               ),
               const SizedBox(width: 12),
-              Expanded(
+              const Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       '首存优惠',
                       style: TextStyle(
                         fontSize: 14,
@@ -518,8 +516,8 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
                         color: AppColors.textPrimary,
                       ),
                     ),
-                    const SizedBox(height: 2),
-                    const Text(
+                    SizedBox(height: 2),
+                    Text(
                       '首次存款享受100%奖金，最高可获得¥1,000',
                       style: TextStyle(
                         fontSize: 12,
@@ -529,7 +527,7 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
                   ],
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.arrow_forward_ios,
                 size: 14,
                 color: AppColors.textSecondary,
@@ -551,7 +549,7 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
           color: AppColors.info.withOpacity(0.3),
         ),
       ),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
@@ -561,8 +559,8 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
                 size: 16,
                 color: AppColors.info,
               ),
-              const SizedBox(width: 8),
-              const Text(
+              SizedBox(width: 8),
+              Text(
                 '安全提示',
                 style: TextStyle(
                   fontSize: 14,
@@ -572,8 +570,8 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
               ),
             ],
           ),
-          const SizedBox(height: 8),
-          const Text(
+          SizedBox(height: 8),
+          Text(
             '• 请确认收款账户信息正确\n• 存款后请保留支付凭证\n• 如有疑问请联系在线客服',
             style: TextStyle(
               fontSize: 12,

@@ -278,7 +278,7 @@ class _StateLoadingWidgetState extends State<StateLoadingWidget>
           ),
           textAlign: TextAlign.center,
         ),
-        if (widget.onRetry != null) ..[
+        if (widget.onRetry != null) ...[
           const SizedBox(height: 16),
           ElevatedButton(
             onPressed: widget.onRetry,

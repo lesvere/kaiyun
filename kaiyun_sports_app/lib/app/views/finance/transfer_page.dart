@@ -120,12 +120,12 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
   }
   
   // 余额卡片
-  Widget _buildBalanceCard(double? balance) {
+  Widget _buildBalanceCard(AccountBalance? balance) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [AppColors.info, AppColors.primary],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -164,7 +164,7 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  balance != null ? '￥${balance.toStringAsFixed(2)}' : '加载中...',
+                  balance != null ? '￥${balance.availableBalance.toStringAsFixed(2)}' : '加载中...',
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 24,
@@ -205,7 +205,7 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
                   color: AppColors.primary.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(6),
                 ),
-                child: Icon(Icons.person, 
+                child: const Icon(Icons.person,
                     color: AppColors.primary, size: 20),
               ),
               const SizedBox(width: 12),
@@ -230,7 +230,7 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(color: AppColors.primary),
+                borderSide: const BorderSide(color: AppColors.primary),
               ),
               prefixIcon: Icon(Icons.account_circle, 
                   color: Colors.grey.shade400),
@@ -276,7 +276,7 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
                   color: AppColors.primary.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(6),
                 ),
-                child: Icon(Icons.attach_money, 
+                child: const Icon(Icons.attach_money,
                     color: AppColors.primary, size: 20),
               ),
               const SizedBox(width: 12),
@@ -302,7 +302,7 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(color: AppColors.primary),
+                borderSide: const BorderSide(color: AppColors.primary),
               ),
               prefixIcon: Icon(Icons.currency_yen, 
                   color: Colors.grey.shade400),
@@ -335,7 +335,7 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
                 child: Chip(
                   label: Text('${amount}元'),
                   backgroundColor: AppColors.primary.withOpacity(0.1),
-                  labelStyle: TextStyle(color: AppColors.primary),
+                  labelStyle: const TextStyle(color: AppColors.primary),
                 ),
               );
             }).toList(),
@@ -450,7 +450,7 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
                   color: AppColors.primary.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(6),
                 ),
-                child: Icon(Icons.note_add, 
+                child: const Icon(Icons.note_add,
                     color: AppColors.primary, size: 20),
               ),
               const SizedBox(width: 12),
@@ -484,7 +484,7 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide(color: AppColors.primary),
+                borderSide: const BorderSide(color: AppColors.primary),
               ),
             ),
           ),
@@ -502,14 +502,14 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: AppColors.warning.withOpacity(0.3)),
       ),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
               Icon(Icons.info_outline, color: AppColors.warning, size: 20),
-              const SizedBox(width: 8),
-              const Text(
+              SizedBox(width: 8),
+              Text(
                 '转账规则',
                 style: TextStyle(
                   fontSize: 14,
@@ -519,8 +519,8 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
               ),
             ],
           ),
-          const SizedBox(height: 8),
-          const Text(
+          SizedBox(height: 8),
+          Text(
             '• 单笔转账最低10元，最高50,000元\n'
             '• 每日转账限额100,000元\n'
             '• 转账完成后不可撤销，请仔细核对信息\n'
@@ -545,14 +545,14 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: Colors.red.withOpacity(0.3)),
       ),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              const Icon(Icons.security, color: Colors.red, size: 20),
-              const SizedBox(width: 8),
-              const Text(
+              Icon(Icons.security, color: Colors.red, size: 20),
+              SizedBox(width: 8),
+              Text(
                 '安全提示',
                 style: TextStyle(
                   fontSize: 14,
@@ -562,8 +562,8 @@ class _TransferPageState extends State<TransferPage> with TickerProviderStateMix
               ),
             ],
           ),
-          const SizedBox(height: 8),
-          const Text(
+          SizedBox(height: 8),
+          Text(
             '• 请确保收款方信息准确无误\n'
             '• 切勿向陌生人转账\n'
             '• 如遇诈骗请立即联系客服\n'

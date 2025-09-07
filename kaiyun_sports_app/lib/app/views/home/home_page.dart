@@ -8,7 +8,6 @@ import '../../core/theme/app_colors.dart';
 import '../../routes/app_routes.dart';
 import '../../core/animations/animation_extensions.dart';
 import '../../core/components/animated_card.dart';
-import '../../core/components/animated_button.dart';
 import '../../core/components/micro_interactions.dart';
 import '../../core/components/enhanced_bottom_navigation.dart';
 import '../../core/components/enhanced_floating_action_button.dart';
@@ -76,8 +75,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       label: '优惠',
     ),
     BottomNavItem(
-      icon: MdiIcons.headsetIcon,
-      activeIcon: MdiIcons.headsetIcon,
+      icon: MdiIcons.headset,
+      activeIcon: MdiIcons.headset,
       label: '客服',
     ),
     BottomNavItem(
@@ -151,7 +150,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             onTap: _onBottomNavTap,
             enableAnimation: true,
             showBadge: true,
-            badgeCounts: {
+            badgeCounts: const {
               1: 2, // 优惠活动有2个新活动
               2: 1, // 客服有1条未读消息
             },
@@ -490,24 +489,24 @@ class _HomeTabPageState extends State<_HomeTabPage>
   }
   
   Widget _buildQuickActions(BuildContext context) {
-    final actions = [
+    final actions = <Map<String, Object>>[
       {
         'icon': Icons.sports_soccer,
         'title': '体育投注',
         'color': AppColors.primary,
-        'route': null,
+        'route': '',
       },
       {
         'icon': Icons.live_tv,
         'title': '直播中心',
         'color': AppColors.error,
-        'route': null,
+        'route': '',
       },
       {
         'icon': Icons.casino,
         'title': '娱乐城',
         'color': AppColors.warning,
-        'route': null,
+        'route': '',
       },
       {
         'icon': MdiIcons.giftOutline,
@@ -528,7 +527,7 @@ class _HomeTabPageState extends State<_HomeTabPage>
         'route': AppRoutes.betRecord,
       },
       {
-        'icon': MdiIcons.headsetIcon,
+        'icon': MdiIcons.headset,
         'title': '客服中心',
         'color': AppColors.secondary,
         'route': AppRoutes.customer,
@@ -797,7 +796,7 @@ class _HomeTabPageState extends State<_HomeTabPage>
               children: [
                 Row(
                   children: [
-                    Icon(
+                    const Icon(
                       MdiIcons.crown,
                       color: Colors.white,
                       size: 20,

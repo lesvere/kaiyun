@@ -2,9 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-import '../error/error_types.dart';
-import '../error/error_handler.dart';
-import 'offline_data_manager.dart';
+import '../offline/offline_data_manager.dart';
 import '../../data/api/api_service.dart';
 
 /// 网络恢复管理器
@@ -15,7 +13,6 @@ class NetworkRecoveryManager {
   
   final ApiService _apiService = ApiService();
   final OfflineDataManager _offlineManager = OfflineDataManager();
-  final ErrorHandler _errorHandler = ErrorHandler();
   
   StreamSubscription<ConnectivityResult>? _connectivitySubscription;
   Timer? _recoveryTimer;

@@ -6,7 +6,7 @@ import '../error/error_handler.dart';
 import '../error/retry_strategy.dart';
 import '../network/network_recovery_manager.dart';
 import '../offline/offline_data_manager.dart';
-import 'error_display_widget.dart';
+import '../ui/error_display_widget.dart';
 
 /// 错误处理和重试管理器
 class ErrorRetryManager {
@@ -222,9 +222,9 @@ class ErrorRetryManager {
     void Function(AppError error)? onError,
   }) {
     return _ErrorBoundary(
-      child: child,
       errorBuilder: errorBuilder,
       onError: onError,
+      child: child,
     );
   }
   

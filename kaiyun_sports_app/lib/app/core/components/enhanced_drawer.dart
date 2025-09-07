@@ -5,7 +5,6 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import '../theme/app_colors.dart';
 import '../navigation/navigation_controller.dart';
 import '../../routes/app_routes.dart';
-import '../../providers/auth_provider.dart';
 
 /// 增强版侧边抽屉菜单
 class EnhancedDrawer extends StatefulWidget {
@@ -176,7 +175,7 @@ class _EnhancedDrawerState extends State<EnhancedDrawer>
                 ),
               ),
               
-              if (widget.isLoggedIn && widget.userLevel != null) ..[
+              if (widget.isLoggedIn && widget.userLevel != null) ...[
                 const SizedBox(height: 4),
                 Container(
                   padding: const EdgeInsets.symmetric(
@@ -201,7 +200,7 @@ class _EnhancedDrawerState extends State<EnhancedDrawer>
                 ),
               ],
               
-              if (!widget.isLoggedIn) ..[
+              if (!widget.isLoggedIn) ...[
                 const SizedBox(height: 8),
                 GestureDetector(
                   onTap: widget.onLogin,
@@ -454,7 +453,7 @@ class _EnhancedDrawerState extends State<EnhancedDrawer>
         route: AppRoutes.accountManagement,
       ),
       DrawerMenuItem(
-        icon: MdiIcons.headsetIcon,
+        icon: MdiIcons.headset,
         title: '客服中心',
         route: AppRoutes.customer,
       ),

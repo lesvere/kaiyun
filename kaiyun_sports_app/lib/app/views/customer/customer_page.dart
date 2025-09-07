@@ -199,8 +199,8 @@ class _CustomerPageState extends State<CustomerPage>
                     elevation: onlineAgents > 0 ? 4 : 1,
                     shadowColor: AppColors.primary.withOpacity(0.4),
                   ).copyWith(
-                    overlayColor: WidgetStateProperty.resolveWith((states) {
-                      if (states.contains(WidgetState.pressed)) {
+                    overlayColor: MaterialStateProperty.resolveWith((states) {
+                      if (states.contains(MaterialState.pressed)) {
                         return Colors.white.withOpacity(0.2);
                       }
                       return null;
@@ -702,8 +702,8 @@ class _CustomerPageState extends State<CustomerPage>
                           elevation: 2,
                           shadowColor: AppColors.primary.withOpacity(0.3),
                         ).copyWith(
-                          overlayColor: WidgetStateProperty.resolveWith((states) {
-                            if (states.contains(WidgetState.pressed)) {
+                          overlayColor: MaterialStateProperty.resolveWith((states) {
+                            if (states.contains(MaterialState.pressed)) {
                               return Colors.white.withOpacity(0.2);
                             }
                             return null;
@@ -754,10 +754,10 @@ class _CustomerPageState extends State<CustomerPage>
                     _showPhoneCallDialog();
                   },
                 ),
-                ListTile(
-                  leading: const Icon(Icons.access_time, color: AppColors.primary),
-                  title: const Text('服务时间'),
-                  subtitle: const Text('24小时在线服务'),
+                const ListTile(
+                  leading: Icon(Icons.access_time, color: AppColors.primary),
+                  title: Text('服务时间'),
+                  subtitle: Text('24小时在线服务'),
                 ),
               ],
             ),
@@ -1033,11 +1033,11 @@ class _CustomerPageState extends State<CustomerPage>
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Row(
+        title: const Row(
           children: [
-            const Icon(Icons.chat_bubble_outline, color: AppColors.primary),
-            const SizedBox(width: 8),
-            const Text('会话详情'),
+            Icon(Icons.chat_bubble_outline, color: AppColors.primary),
+            SizedBox(width: 8),
+            Text('会话详情'),
           ],
         ),
         content: Column(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../core/theme/app_colors.dart';
-import '../../data/models/betting_models.dart';
+import '../../data/models/sports_models.dart';
 import '../../data/services/betting_service.dart';
 import '../../data/api/api_service.dart';
 
@@ -51,9 +51,9 @@ class _SportsDataPageState extends State<SportsDataPage>
       ]);
       
       setState(() {
-        _liveMatches = results[0] as List<MatchInfo>;
-        _upcomingMatches = results[1] as List<MatchInfo>;
-        _popularMatches = results[2] as List<MatchInfo>;
+        _liveMatches = results[0];
+        _upcomingMatches = results[1];
+        _popularMatches = results[2];
         _isLoading = false;
       });
     } catch (e) {
@@ -211,8 +211,7 @@ class _SportsDataPageState extends State<SportsDataPage>
             const SizedBox(height: 16),
             
             // 投注选项
-            if (match.bettingOptions.isNotEmpty)
-              _buildBettingOptions(match),
+            _buildBettingOptions(match),
           ],
         ),
       ),
@@ -254,7 +253,7 @@ class _SportsDataPageState extends State<SportsDataPage>
         // 联赛名称
         Expanded(
           child: Text(
-            match.league,
+            "match.league",
             style: const TextStyle(
               fontSize: 12,
               color: AppColors.textSecondary,
@@ -264,7 +263,7 @@ class _SportsDataPageState extends State<SportsDataPage>
         
         // 时间
         Text(
-          _formatMatchTime(match.matchTime),
+          _formatMatchTime(DateTime.now()),
           style: const TextStyle(
             fontSize: 12,
             color: AppColors.textSecondary,
@@ -284,23 +283,8 @@ class _SportsDataPageState extends State<SportsDataPage>
               CircleAvatar(
                 radius: 20,
                 backgroundColor: Colors.grey[200],
-                child: match.logoHome != null
-                    ? Image.network(
-                        match.logoHome!,
-                        width: 24,
-                        height: 24,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Text(
-                            match.homeTeam.substring(0, 1),
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.primary,
-                            ),
-                          );
-                        },
-                      )
-                    : Text(
-                        match.homeTeam.substring(0, 1),
+                child: Text(
+                        match.teamA.substring(0, 1),
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary,
@@ -309,7 +293,7 @@ class _SportsDataPageState extends State<SportsDataPage>
               ),
               const SizedBox(height: 8),
               Text(
-                match.homeTeam,
+                match.teamA,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -324,22 +308,12 @@ class _SportsDataPageState extends State<SportsDataPage>
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              if (match.homeScore != null && match.awayScore != null)
-                Text(
-                  '${match.homeScore} : ${match.awayScore}',
+              Text(
+                  '${match.scoreA} : ${match.scoreB}',
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     color: AppColors.primary,
-                  ),
-                )
-              else
-                const Text(
-                  'VS',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.textSecondary,
                   ),
                 ),
               if (match.status == MatchStatus.live)
@@ -370,23 +344,8 @@ class _SportsDataPageState extends State<SportsDataPage>
               CircleAvatar(
                 radius: 20,
                 backgroundColor: Colors.grey[200],
-                child: match.logoAway != null
-                    ? Image.network(
-                        match.logoAway!,
-                        width: 24,
-                        height: 24,
-                        errorBuilder: (context, error, stackTrace) {
-                          return Text(
-                            match.awayTeam.substring(0, 1),
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.primary,
-                            ),
-                          );
-                        },
-                      )
-                    : Text(
-                        match.awayTeam.substring(0, 1),
+                child: Text(
+                        match.teamB.substring(0, 1),
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           color: AppColors.primary,
@@ -395,7 +354,7 @@ class _SportsDataPageState extends State<SportsDataPage>
               ),
               const SizedBox(height: 8),
               Text(
-                match.awayTeam,
+                match.teamB,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -430,23 +389,19 @@ class _SportsDataPageState extends State<SportsDataPage>
           Wrap(
             spacing: 8,
             runSpacing: 8,
-            children: match.bettingOptions.map((option) {
+            children: [BettingOption(id: "1", name: "主胜", odds: 1.5)].map((option) {
               return GestureDetector(
-                onTap: option.available
-                    ? () => _showBetDialog(match, option)
-                    : null,
+                onTap: () => _showBetDialog(match, option),
                 child: Container(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 12,
                     vertical: 8,
                   ),
                   decoration: BoxDecoration(
-                    color: option.available ? Colors.white : Colors.grey[200],
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(6),
                     border: Border.all(
-                      color: option.available 
-                          ? AppColors.primary.withOpacity(0.3)
-                          : Colors.grey,
+                      color: AppColors.primary.withOpacity(0.3),
                     ),
                   ),
                   child: Column(
@@ -454,23 +409,19 @@ class _SportsDataPageState extends State<SportsDataPage>
                     children: [
                       Text(
                         option.name,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w500,
-                          color: option.available 
-                              ? AppColors.textPrimary
-                              : Colors.grey,
+                          color: AppColors.textPrimary,
                         ),
                       ),
                       const SizedBox(height: 2),
                       Text(
                         option.odds.toStringAsFixed(2),
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
-                          color: option.available 
-                              ? AppColors.primary
-                              : Colors.grey,
+                          color: AppColors.primary,
                         ),
                       ),
                     ],
@@ -488,7 +439,7 @@ class _SportsDataPageState extends State<SportsDataPage>
     switch (status) {
       case MatchStatus.live:
         return Colors.red;
-      case MatchStatus.scheduled:
+      case MatchStatus.upcoming:
         return AppColors.info;
       case MatchStatus.finished:
         return Colors.grey;
@@ -501,7 +452,7 @@ class _SportsDataPageState extends State<SportsDataPage>
     switch (status) {
       case MatchStatus.live:
         return Icons.play_circle_filled;
-      case MatchStatus.scheduled:
+      case MatchStatus.upcoming:
         return Icons.schedule;
       case MatchStatus.finished:
         return Icons.check_circle;
@@ -514,7 +465,7 @@ class _SportsDataPageState extends State<SportsDataPage>
     switch (status) {
       case MatchStatus.live:
         return '进行中';
-      case MatchStatus.scheduled:
+      case MatchStatus.upcoming:
         return '未开始';
       case MatchStatus.finished:
         return '已结束';
@@ -551,7 +502,7 @@ class _SportsDataPageState extends State<SportsDataPage>
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('赛事: ${match.homeTeam} vs ${match.awayTeam}'),
+            Text('赛事: ${match.teamA} vs ${match.teamB}'),
             Text('投注选项: ${option.name}'),
             Text('赔率: ${option.odds}'),
             const SizedBox(height: 12),

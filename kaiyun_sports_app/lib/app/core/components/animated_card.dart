@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../theme/app_colors.dart';
-import '../animations/animation_extensions.dart';
 
 /// 动画卡片组件
 class AnimatedCard extends StatefulWidget {

@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../theme/app_colors.dart';
@@ -400,5 +401,3 @@ class _RotatedLine {
   
   _RotatedLine({required this.start, required this.end});
 }
-
-import 'dart:math' as math;

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 import '../theme/app_colors.dart';
-import '../navigation/navigation_controller.dart';
 
 /// 增强版底部导航栏 - 支持动画和交互反馈
 class EnhancedBottomNavigation extends StatefulWidget {

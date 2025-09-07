@@ -14,7 +14,7 @@ class AppLoadingIndicator extends StatelessWidget {
   final double? value;
 
   const AppLoadingIndicator({
-    Key? key,
+    super.key,
     this.type = AppLoadingType.circular,
     this.color,
     this.size = 40.0,
@@ -23,7 +23,7 @@ class AppLoadingIndicator extends StatelessWidget {
     this.overlay = false,
     this.backgroundColor,
     this.value,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -435,12 +435,12 @@ class _SkeletonLoadingIndicatorState extends State<_SkeletonLoadingIndicator>
             gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [
-                Colors.grey[300]!,
-                Colors.grey[100]!,
-                Colors.grey[300]!,
+              colors: const [
+                Color(0xFFE0E0E0),
+                Color(0xFFF5F5F5),
+                Color(0xFFE0E0E0),
               ],
-              stops: [
+              stops: const [
                 0.0,
                 0.5,
                 1.0,

@@ -47,7 +47,7 @@ class MinePage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
-              title == '帮助中心' ? MdiIcons.headsetIcon : MdiIcons.emailOutline,
+              title == '帮助中心' ? MdiIcons.headset : MdiIcons.emailOutline,
               size: 50,
               color: AppColors.primary,
             ),
@@ -268,11 +268,11 @@ class MinePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
             child: Row(
               children: [
-                Expanded(
+                const Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
+                      Text(
                         '福利中心 尽享优惠',
                         style: TextStyle(
                           fontSize: 18,
@@ -280,12 +280,12 @@ class MinePage extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 4),
+                      SizedBox(height: 4),
                       Text(
                         '加入VIP专享豪礼',
                         style: TextStyle(
                           fontSize: 12,
-                          color: Colors.white.withOpacity(0.8),
+                          color: Colors.white,
                         ),
                       ),
                     ],
@@ -297,10 +297,10 @@ class MinePage extends StatelessWidget {
                     color: Colors.white.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: Row(
+                  child: const Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Text(
+                      Text(
                         '领取福利',
                         style: TextStyle(
                           color: Colors.white,
@@ -308,7 +308,7 @@ class MinePage extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      const SizedBox(width: 4),
+                      SizedBox(width: 4),
                       Icon(
                         Icons.arrow_forward_ios,
                         color: Colors.white,
@@ -341,7 +341,7 @@ class MinePage extends StatelessWidget {
       {
         'icon': MdiIcons.waterOutline,
         'title': '实时返水',
-        'route': AppRoutes.rebate,
+        'route': AppRoutes.realtimeRebate,
       },
       {
         'icon': MdiIcons.accountOutline,
@@ -366,7 +366,7 @@ class MinePage extends StatelessWidget {
       {
         'icon': MdiIcons.accountPlusOutline,
         'title': '加入我们',
-        'route': AppRoutes.agent,
+        'route': AppRoutes.agentPage,
       },
     ];
     
@@ -536,7 +536,7 @@ class MinePage extends StatelessWidget {
           const SizedBox(height: 6),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 11,
               color: AppColors.textSecondary,
             ),

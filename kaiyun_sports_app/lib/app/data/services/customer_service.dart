@@ -23,7 +23,7 @@ class CustomerService {
     int priority = 3,
   }) async {
     try {
-      final response = await _apiService.post('/customer-service/session/create', {
+      final response = await _apiService.post('/customer-service/session/create', data: {
         'user_id': userId,
         'category': category,
         'subject': subject,
@@ -47,7 +47,7 @@ class CustomerService {
   /// 获取用户的客服会话列表
   Future<List<CustomerSession>> getUserSessions(String userId) async {
     try {
-      final response = await _apiService.get('/customer-service/sessions', {
+      final response = await _apiService.get('/customer-service/sessions', queryParameters: {
         'user_id': userId,
       });
       return (response.data['sessions'] as List)
@@ -66,7 +66,7 @@ class CustomerService {
     List<String>? attachments,
   }) async {
     try {
-      final response = await _apiService.post('/customer-service/message/send', {
+      final response = await _apiService.post('/customer-service/message/send', data: {
         'session_id': sessionId,
         'content': content,
         'type': type.toString().split('.').last,
@@ -105,7 +105,7 @@ class CustomerService {
   /// 获取会话消息历史
   Future<List<CustomerMessage>> getSessionMessages(String sessionId) async {
     try {
-      final response = await _apiService.get('/customer-service/messages', {
+      final response = await _apiService.get('/customer-service/messages', queryParameters: {
         'session_id': sessionId,
       });
       return (response.data['messages'] as List)
@@ -134,7 +134,7 @@ class CustomerService {
     String? keyword,
   }) async {
     try {
-      final response = await _apiService.get('/customer-service/faq', {
+      final response = await _apiService.get('/customer-service/faq', queryParameters: {
         'category': category,
         'keyword': keyword,
       });
@@ -165,7 +165,7 @@ class CustomerService {
     String? feedback,
   }) async {
     try {
-      final response = await _apiService.post('/customer-service/rate', {
+      final response = await _apiService.post('/customer-service/rate', data: {
         'session_id': sessionId,
         'rating': rating,
         'feedback': feedback,
@@ -179,7 +179,7 @@ class CustomerService {
   /// 结束会话
   Future<bool> endSession(String sessionId) async {
     try {
-      final response = await _apiService.post('/customer-service/session/end', {
+      final response = await _apiService.post('/customer-service/session/end', data: {
         'session_id': sessionId,
       });
       return response.data['success'] ?? false;
@@ -191,7 +191,7 @@ class CustomerService {
   /// 搜索FAQ
   Future<List<FAQ>> searchFAQs(String query) async {
     try {
-      final response = await _apiService.get('/customer-service/faq/search', {
+      final response = await _apiService.get('/customer-service/faq/search', queryParameters: {
         'query': query,
       });
       return (response.data['faqs'] as List)

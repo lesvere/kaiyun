@@ -188,7 +188,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _usernameController,
                   decoration: InputDecoration(
                     labelText: '用户名/邮箱/手机号',
-                    prefixIcon: Icon(
+                    prefixIcon: const Icon(
                       Icons.person_outline,
                       color: AppColors.primary,
                     ),
@@ -219,7 +219,7 @@ class _LoginPageState extends State<LoginPage> {
                   obscureText: _obscurePassword,
                   decoration: InputDecoration(
                     labelText: '密码',
-                    prefixIcon: Icon(
+                    prefixIcon: const Icon(
                       Icons.lock_outline,
                       color: AppColors.primary,
                     ),
@@ -394,7 +394,7 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                if (showBiometric) ..[
+                if (showBiometric) ...[
                   _buildSocialLoginButton(
                     icon: Icons.fingerprint,
                     label: '生物认证',
@@ -549,143 +549,5 @@ class _LoginPageState extends State<LoginPage> {
         ],
       ),
     );
-  }.of<AuthProvider>(context, listen: false);
-      
-      authProvider.login(
-        _usernameController.text,
-        _passwordController.text,
-      ).then((success) {
-        if (success) {
-          Get.offAllNamed(AppRoutes.home);
-        } else {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(authProvider.errorMessage ?? '登录失败'),
-              backgroundColor: AppColors.error,
-            ),
-          );
-        }
-      });
-    }
-  }
-  
-  void _handleBiometricLogin() async {
-    final authProvider = Provider.of<AuthProvider>(context, listen: false);
-    
-    final success = await authProvider.biometricLogin();
-    if (success) {
-      Get.offAllNamed(AppRoutes.home);
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(authProvider.errorMessage ?? '生物认证失败'),
-          backgroundColor: AppColors.error,
-        ),
-      );
-    }
-  }
-  
-  void _showPinLoginDialog() {
-    showDialog(
-      context: context,
-      builder: (context) => _buildPinLoginDialog(),
-    );
-  }
-  
-  Widget _buildPinLoginDialog() {
-    final pinController = TextEditingController();
-    
-    return AlertDialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(16),
-      ),
-      title: const Text('输入PIN码'),
-      content: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Text('请输入您的6位数字PIN码'),
-          const SizedBox(height: 16),
-          TextField(
-            controller: pinController,
-            keyboardType: TextInputType.number,
-            obscureText: true,
-            maxLength: 6,
-            textAlign: TextAlign.center,
-            decoration: InputDecoration(
-              hintText: '请输入PIN码',
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(8),
-                borderSide: const BorderSide(
-                  color: AppColors.primary,
-                  width: 2,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-      actions: [
-        TextButton(
-          onPressed: () => Navigator.of(context).pop(),
-          child: const Text('取消'),
-        ),
-        Consumer<AuthProvider>(
-          builder: (context, authProvider, child) {
-            return ElevatedButton(
-              onPressed: authProvider.isLoading
-                  ? null
-                  : () => _handlePinLogin(pinController.text),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.primary,
-                foregroundColor: Colors.white,
-              ),
-              child: authProvider.isLoading
-                  ? const SizedBox(
-                      width: 16,
-                      height: 16,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 2,
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          Colors.white,
-                        ),
-                      ),
-                    )
-                  : const Text('登录'),
-            );
-          },
-        ),
-      ],
-    );
-  }
-  
-  void _handlePinLogin(String pin) async {
-    if (pin.length != 6) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('请输入6位数字PIN码'),
-          backgroundColor: AppColors.error,
-        ),
-      );
-      return;
-    }
-    
-    final authProvider = Provider.of<AuthProvider>(context, listen: false);
-    
-    final success = await authProvider.pinLogin(pin);
-    Navigator.of(context).pop(); // 关闭对话框
-    
-    if (success) {
-      Get.offAllNamed(AppRoutes.home);
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(authProvider.errorMessage ?? 'PIN码错误'),
-          backgroundColor: AppColors.error,
-        ),
-      );
-    }
   }
 }

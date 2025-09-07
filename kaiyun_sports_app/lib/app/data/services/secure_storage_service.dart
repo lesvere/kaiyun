@@ -11,7 +11,7 @@ class SecureStorageService {
     iOptions: IOSOptions(
       groupId: 'com.kaiyun.sports.group',
       accountName: 'kaiyun_account',
-      accessibility: IOSAccessibility.first_unlock_this_device,
+      accessibility: IOSAccessibility.when_unlocked_this_device,
     ),
   );
   
@@ -27,6 +27,21 @@ class SecureStorageService {
   static const String _keyLastLoginTime = 'last_login_time';
   static const String _keySecurityQuestions = 'security_questions';
   
+  /// 保存通用值
+  static Future<void> saveValue(String key, String value) async {
+    await _secureStorage.write(key: key, value: value);
+  }
+
+  /// 获取通用值
+  static Future<String?> getValue(String key) async {
+    return await _secureStorage.read(key: key);
+  }
+
+  /// 删除通用值
+  static Future<void> deleteKey(String key) async {
+    await _secureStorage.delete(key: key);
+  }
+
   /// 保存认证Token
   static Future<void> saveAuthToken(String token) async {
     await _secureStorage.write(key: _keyAuthToken, value: token);

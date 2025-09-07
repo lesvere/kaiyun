@@ -17,7 +17,7 @@ class AppButton extends StatelessWidget {
   final bool gradient;
   
   const AppButton({
-    Key? key,
+    super.key,
     required this.text,
     this.onPressed,
     this.type = AppButtonType.primary,
@@ -29,13 +29,13 @@ class AppButton extends StatelessWidget {
     this.width,
     this.padding,
     this.gradient = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     final bool isDisabled = !isEnabled || onPressed == null || isLoading;
     
-    return Container(
+    return SizedBox(
       width: width,
       child: _buildButton(context, isDisabled),
     );
@@ -186,7 +186,7 @@ class AppButton extends StatelessWidget {
   Widget _buildVipButton(BuildContext context, bool isDisabled) {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [
             AppColors.vipGold,
             AppColors.vipGoldDark,
@@ -195,11 +195,11 @@ class AppButton extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
-            color: AppColors.vipGold.withOpacity(0.3),
+            color: Color.fromRGBO(212, 175, 55, 0.3),
             blurRadius: 8,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),
@@ -225,7 +225,7 @@ class AppButton extends StatelessWidget {
   /// 构建渐变背景装饰
   BoxDecoration _buildGradientDecoration() {
     return BoxDecoration(
-      gradient: LinearGradient(
+      gradient: const LinearGradient(
         colors: [
           AppColors.blueGradientStart,
           AppColors.blueGradientEnd,
@@ -234,11 +234,11 @@ class AppButton extends StatelessWidget {
         end: Alignment.bottomRight,
       ),
       borderRadius: BorderRadius.circular(12),
-      boxShadow: [
+      boxShadow: const [
         BoxShadow(
-          color: AppColors.primary.withOpacity(0.3),
+          color: Color.fromRGBO(24, 144, 255, 0.3),
           blurRadius: 8,
-          offset: const Offset(0, 4),
+          offset: Offset(0, 4),
         ),
       ],
     );

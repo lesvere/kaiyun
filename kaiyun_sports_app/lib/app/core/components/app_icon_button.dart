@@ -21,7 +21,7 @@ class AppIconButton extends StatelessWidget {
   final Color? badgeColor;
 
   const AppIconButton({
-    Key? key,
+    super.key,
     required this.icon,
     this.onPressed,
     this.type = AppIconButtonType.standard,
@@ -37,7 +37,7 @@ class AppIconButton extends StatelessWidget {
     this.badge = false,
     this.badgeCount = 0,
     this.badgeColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -260,7 +260,7 @@ class AppIconButton extends StatelessWidget {
       width: buttonSize,
       height: buttonSize,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [
             AppColors.blueGradientStart,
             AppColors.blueGradientEnd,
@@ -269,11 +269,11 @@ class AppIconButton extends StatelessWidget {
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(12),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
-            color: AppColors.primary.withOpacity(0.3),
+            color: Color.fromRGBO(24, 144, 255, 0.3),
             blurRadius: 8,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),

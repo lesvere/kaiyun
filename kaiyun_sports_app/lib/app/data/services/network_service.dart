@@ -3,6 +3,22 @@ import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
 
+/// 网络状态枚举
+enum NetworkStatus {
+  connected,
+  disconnected,
+  slow,
+  unstable,
+}
+
+/// 网络类型枚举
+enum NetworkType {
+  mobile,
+  wifi,
+  ethernet,
+  none,
+}
+
 /// 网络状态监听服务
 class NetworkService {
   static final NetworkService _instance = NetworkService._internal();
@@ -13,22 +29,6 @@ class NetworkService {
   ConnectivityResult _currentStatus = ConnectivityResult.none;
   final StreamController<NetworkStatus> _networkStatusController = 
       StreamController<NetworkStatus>.broadcast();
-  
-  /// 网络状态枚举
-  enum NetworkStatus {
-    connected,
-    disconnected,
-    slow,
-    unstable,
-  }
-  
-  /// 网络类型枚举
-  enum NetworkType {
-    mobile,
-    wifi,
-    ethernet,
-    none,
-  }
   
   // Getters
   ConnectivityResult get currentStatus => _currentStatus;
@@ -218,7 +218,7 @@ class NetworkService {
 /// 网络状态异常
 class NetworkException implements Exception {
   final String message;
-  final NetworkService.NetworkStatus status;
+  final NetworkStatus status;
   
   NetworkException(this.message, this.status);
   
