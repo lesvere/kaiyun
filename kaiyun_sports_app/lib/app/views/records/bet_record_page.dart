@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../core/theme/app_colors.dart';
-import '../../data/models/betting_models.dart';
+import '../../data/models/bet_models.dart';
 import '../../providers/bet_provider.dart';
-import '../../data/services/betting_service.dart';
+import '../../data/services/bet_service.dart';
 
 class BetRecordPage extends StatefulWidget {
   const BetRecordPage({super.key});
@@ -15,7 +15,7 @@ class BetRecordPage extends StatefulWidget {
 class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateMixin {
 
   late TabController _tabController;
-  final BettingService _betService = BettingService();
+  final BetService _betService = BetService();
   
   BetStatistics? _statistics;
   List<BetRecord> _betRecords = [];
@@ -120,11 +120,11 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
             padding: const EdgeInsets.all(16),
             child: Column(
               children: [
-                const Row(
+                Row(
                   children: [
-                    Icon(Icons.sports_soccer, color: AppColors.primary),
-                    SizedBox(width: 8),
-                    Text(
+                    const Icon(Icons.sports_soccer, color: AppColors.primary),
+                    const SizedBox(width: 8),
+                    const Text(
                       '投注统计',
                       style: TextStyle(
                         fontSize: 18,
@@ -455,9 +455,9 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                 const SizedBox(height: 20),
                 
                 // 标题
-                const Text(
+                Text(
                   '投注详情',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -482,7 +482,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                 const SizedBox(height: 20),
                 
                 // 操作按钮
-                if (bet.status == BetStatus.pending) ...[
+                if (bet.status == BetStatus.pending) ..[
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -497,7 +497,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                   ),
                 ],
                 
-                const SizedBox(height: 20),
+                const SizedBox(bottom: 20),
               ],
             ),
           );

@@ -725,7 +725,7 @@ class _HomeTabPageState extends State<_HomeTabPage>
                 children: [
                   Text(
                     '${match['主队']} vs ${match['客队']}',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: FontWeight.w500,
                       color: AppColors.textPrimary,
                     ),
@@ -733,7 +733,7 @@ class _HomeTabPageState extends State<_HomeTabPage>
                   const SizedBox(height: 4),
                   Text(
                     match['时间']!,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: AppColors.textSecondary,
                       fontSize: 12,
                     ),
@@ -751,7 +751,7 @@ class _HomeTabPageState extends State<_HomeTabPage>
                   ),
                   child: Text(
                     match['状态']!,
-                    style: const TextStyle(
+                    style: TextStyle(
                       color: Colors.white,
                       fontSize: 10,
                     ),

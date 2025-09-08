@@ -95,4 +95,39 @@ class BettingService {
     await Future.delayed(const Duration(seconds: 1));
     return [];
   }
+
+  // 获取投注统计信息 (模拟)
+  Future<BetStatistics> getBetStatistics(String userId) async {
+    // In a real app, this would fetch data from the API
+    await Future.delayed(const Duration(milliseconds: 500));
+    final records = await getBetRecords(userId);
+
+    if (records.isEmpty) {
+      return BetStatistics();
+    }
+
+    final today = DateTime.now();
+    final todayRecords = records.where((r) =>
+        r.createdAt.year == today.year &&
+        r.createdAt.month == today.month &&
+        r.createdAt.day == today.day).toList();
+
+    final todayBetAmount = todayRecords.fold<double>(0, (sum, r) => sum + r.amount);
+    final todayProfit = todayRecords.where((r) => r.status == BetStatus.won || r.status == BetStatus.lost)
+                                  .fold<double>(0, (sum, r) => sum + r.profit);
+
+    final settledRecords = records.where((r) => r.status == BetStatus.won || r.status == BetStatus.lost);
+    final wonCount = settledRecords.where((r) => r.status == BetStatus.won).length;
+    final winRate = settledRecords.isNotEmpty ? wonCount / settledRecords.length : 0.0;
+
+    final totalProfit = records.where((r) => r.status == BetStatus.won || r.status == BetStatus.lost)
+                               .fold<double>(0, (sum, r) => sum + r.profit);
+
+    return BetStatistics(
+      todayBetAmount: todayBetAmount,
+      todayProfit: todayProfit,
+      winRate: winRate,
+      totalProfit: totalProfit,
+    );
+  }
 }

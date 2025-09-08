@@ -128,7 +128,7 @@ class HttpServiceManager {
 class HttpServiceStatus {
   final bool isInitialized;
   final bool hasNetworkConnection;
-  final NetworkService.NetworkType networkType;
+  final NetworkType networkType;
   final String networkStatus;
   final Map<String, dynamic> requestQueueStatus;
   

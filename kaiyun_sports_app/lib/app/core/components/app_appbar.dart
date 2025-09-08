@@ -50,27 +50,29 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: _buildDecoration(),
-      child: AppBar(
-        title: titleWidget ?? (title != null ? _buildTitle(context) : null),
-        actions: actions,
-        leading: _buildLeading(context),
-        automaticallyImplyLeading: automaticallyImplyLeading && leading == null,
-        backgroundColor: transparent ? Colors.transparent : _getBackgroundColor(),
-        foregroundColor: foregroundColor ?? _getForegroundColor(),
-        elevation: elevation,
-        scrolledUnderElevation: elevation,
-        centerTitle: centerTitle,
-        leadingWidth: leadingWidth,
-        toolbarHeight: toolbarHeight,
-        systemUiOverlayStyle: systemOverlayStyle ?? _getSystemOverlayStyle(),
-        shape: showBorder ? const Border(
-          bottom: BorderSide(
-            color: AppColors.divider,
-            width: 0.5,
-          ),
-        ) : null,
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: systemOverlayStyle ?? _getSystemOverlayStyle(),
+      child: Container(
+        decoration: _buildDecoration(),
+        child: AppBar(
+          title: titleWidget ?? (title != null ? _buildTitle(context) : null),
+          actions: actions,
+          leading: _buildLeading(context),
+          automaticallyImplyLeading: automaticallyImplyLeading && leading == null,
+          backgroundColor: transparent ? Colors.transparent : _getBackgroundColor(),
+          foregroundColor: foregroundColor ?? _getForegroundColor(),
+          elevation: elevation,
+          scrolledUnderElevation: elevation,
+          centerTitle: centerTitle,
+          leadingWidth: leadingWidth,
+          toolbarHeight: toolbarHeight,
+          shape: showBorder ? const Border(
+            bottom: BorderSide(
+              color: AppColors.divider,
+              width: 0.5,
+            ),
+          ) : null,
+        ),
       ),
     );
   }

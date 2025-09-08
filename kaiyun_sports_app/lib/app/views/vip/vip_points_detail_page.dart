@@ -48,7 +48,7 @@ class _VipPointsDetailPageState extends State<VipPointsDetailPage> {
     
     try {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
-      final userId = authProvider.currentUser?.id ?? '';
+      final userId = authProvider.user?.id ?? '';
       
       if (userId.isNotEmpty) {
         final records = await _vipService.getPointsRecords(
@@ -77,7 +77,7 @@ class _VipPointsDetailPageState extends State<VipPointsDetailPage> {
     
     try {
       final authProvider = Provider.of<AuthProvider>(context, listen: false);
-      final userId = authProvider.currentUser?.id ?? '';
+      final userId = authProvider.user?.id ?? '';
       
       if (userId.isNotEmpty) {
         final records = await _vipService.getPointsRecords(

@@ -78,7 +78,7 @@ class ErrorDisplayWidget extends StatelessWidget {
           ),
           
           // 详细信息
-          if (showDetails && kDebugMode) ..[
+          if (showDetails && kDebugMode) ...[
             const SizedBox(height: 8),
             ExpansionTile(
               title: Text(
@@ -117,7 +117,7 @@ class ErrorDisplayWidget extends StatelessWidget {
           ],
           
           // 操作按钮
-          if (showRetryButton && error.retryable) ..[
+          if (showRetryButton && error.retryable) ...[
             const SizedBox(height: 16),
             Row(
               children: [

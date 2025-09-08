@@ -734,3 +734,15 @@ class VipExchangeItem {
     return null;
   }
 }
+
+/// 兑换商品类型枚举
+enum ExchangeType {
+  cash('现金'),
+  bonus('奖金'),
+  freebet('免费投注'),
+  service('专属服务'),
+  merchandise('实物商品');
+
+  const ExchangeType(this.displayName);
+  final String displayName;
+}

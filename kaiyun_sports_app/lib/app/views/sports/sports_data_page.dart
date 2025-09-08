@@ -30,7 +30,7 @@ class _SportsDataPageState extends State<SportsDataPage>
   void initState() {
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
-    _bettingService = BettingService(ApiService());
+    _bettingService = BettingService();
     _loadData();
   }
   

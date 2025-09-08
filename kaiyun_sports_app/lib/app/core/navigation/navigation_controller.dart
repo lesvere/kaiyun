@@ -20,7 +20,9 @@ class NavigationController extends GetxController {
   void onInit() {
     super.onInit();
     // 监听路由变化
-    ever(Get.routing, _handleRouteChange);
+    Get.routingCallback = (routing) {
+      _handleRouteChange(routing);
+    };
   }
   
   /// 处理路由变化
@@ -76,7 +78,7 @@ class NavigationController extends GetxController {
   }) {
     HapticFeedback.lightImpact();
     
-    if (Get.canPop()) {
+    if (canGoBack.value) {
       Get.back(result: result);
       
       // 更新历史栈

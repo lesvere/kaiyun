@@ -11,7 +11,7 @@ class SecureStorageService {
     iOptions: IOSOptions(
       groupId: 'com.kaiyun.sports.group',
       accountName: 'kaiyun_account',
-      accessibility: IOSAccessibility.when_unlocked_this_device,
+      accessibility: IOSAccessibility.when_unlocked_this_device_only,
     ),
   );
   

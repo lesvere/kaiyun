@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../routes/app_routes.dart';
 import '../views/splash/splash_page.dart';
@@ -20,7 +21,7 @@ import '../views/account/feedback_page.dart';
 import '../views/account/help_center_page.dart';
 import '../views/account/agent_page.dart';
 import '../views/share/share_earn_page.dart';
-import 'page_transitions.dart';
+import '../core/animations/page_transitions.dart';
 
 class AppPages {
   static final List<GetPage> pages = [

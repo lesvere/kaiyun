@@ -69,7 +69,7 @@ class AnimatedLoading extends StatelessWidget {
         break;
         
       case LoadingType.bounce:
-        loadingWidget = SpinKitBounce(
+        loadingWidget = SpinKitDoubleBounce(
           color: loadingColor,
           size: size,
           duration: duration,
