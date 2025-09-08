@@ -796,7 +796,7 @@ class _HomeTabPageState extends State<_HomeTabPage>
               children: [
                 Row(
                   children: [
-                    const Icon(
+                    Icon(
                       MdiIcons.crown,
                       color: Colors.white,
                       size: 20,
