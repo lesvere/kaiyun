@@ -188,7 +188,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _usernameController,
                   decoration: InputDecoration(
                     labelText: '用户名/邮箱/手机号',
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       Icons.person_outline,
                       color: AppColors.primary,
                     ),
@@ -219,7 +219,7 @@ class _LoginPageState extends State<LoginPage> {
                   obscureText: _obscurePassword,
                   decoration: InputDecoration(
                     labelText: '密码',
-                    prefixIcon: const Icon(
+                    prefixIcon: Icon(
                       Icons.lock_outline,
                       color: AppColors.primary,
                     ),
@@ -394,7 +394,7 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                if (showBiometric) ...[
+                if (showBiometric) ..[
                   _buildSocialLoginButton(
                     icon: Icons.fingerprint,
                     label: '生物认证',
