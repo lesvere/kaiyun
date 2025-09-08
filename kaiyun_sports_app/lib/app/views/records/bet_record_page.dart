@@ -482,7 +482,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                 const SizedBox(height: 20),
                 
                 // 操作按钮
-                if (bet.status == BetStatus.pending) ..[
+                if (bet.status == BetStatus.pending) ...[
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(

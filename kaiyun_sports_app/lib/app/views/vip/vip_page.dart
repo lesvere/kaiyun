@@ -739,7 +739,7 @@ class _VipPageState extends State<VipPage>
                       color: AppColors.textSecondary,
                     ),
                   ),
-                  if (benefit.value != null) ..[
+                  if (benefit.value != null) ...[
                     const SizedBox(height: 4),
                     Text(
                       '价值: ${benefit.value}${benefit.unit ?? ''}',

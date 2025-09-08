@@ -176,7 +176,7 @@ class _EnhancedDrawerState extends State<EnhancedDrawer>
                 ),
               ),
               
-              if (widget.isLoggedIn && widget.userLevel != null) ..[
+              if (widget.isLoggedIn && widget.userLevel != null) ...[
                 const SizedBox(height: 4),
                 Container(
                   padding: const EdgeInsets.symmetric(
@@ -201,7 +201,7 @@ class _EnhancedDrawerState extends State<EnhancedDrawer>
                 ),
               ],
               
-              if (!widget.isLoggedIn) ..[
+              if (!widget.isLoggedIn) ...[
                 const SizedBox(height: 8),
                 GestureDetector(
                   onTap: widget.onLogin,

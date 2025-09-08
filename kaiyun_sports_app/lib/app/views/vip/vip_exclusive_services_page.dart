@@ -388,7 +388,7 @@ class _VipExclusiveServicesPageState extends State<VipExclusiveServicesPage> {
                             ),
                           ),
                         ),
-                        if (!service.isAvailable) ..[
+                        if (!service.isAvailable) ...[
                           const SizedBox(width: 8),
                           Container(
                             padding: const EdgeInsets.symmetric(

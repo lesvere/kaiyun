@@ -180,7 +180,7 @@ class _DepositPageState extends State<DepositPage> with TickerProviderStateMixin
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              if (balance?.lastUpdatedAt != null) ..[
+              if (balance?.lastUpdatedAt != null) ...[
                 const SizedBox(height: 4),
                 Text(
                   '更新时间: ${balance!.lastUpdatedAt.toString().substring(11, 19)}',
