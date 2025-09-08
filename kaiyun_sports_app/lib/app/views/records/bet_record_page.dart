@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../core/theme/app_colors.dart';
-import '../../data/models/bet_models.dart';
-import '../../providers/bet_provider.dart';
-import '../../data/services/bet_service.dart';
+import '../../data/models/betting_models.dart';
+import '../../data/services/betting_service.dart';
+import '../../providers/auth_provider.dart';
 
 class BetRecordPage extends StatefulWidget {
   const BetRecordPage({super.key});
@@ -15,7 +15,7 @@ class BetRecordPage extends StatefulWidget {
 class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateMixin {
 
   late TabController _tabController;
-  final BetService _betService = BetService();
+  final BettingService _betService = BettingService();
   
   BetStatistics? _statistics;
   List<BetRecord> _betRecords = [];
@@ -39,11 +39,19 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
 
   Future<void> _loadData() async {
     setState(() => _isLoading = true);
+    final authProvider = Provider.of<AuthProvider>(context, listen: false);
+    final userId = authProvider.user?.id;
+
+    if (userId == null) {
+      setState(() => _isLoading = false);
+      _showMessage('用户未登录', isError: true);
+      return;
+    }
     
     try {
       final results = await Future.wait([
-        _betService.getBetStatistics(),
-        _betService.getBetRecords(),
+        _betService.getBetStatistics(userId),
+        _betService.getBetRecords(userId),
       ]);
       
       setState(() {
@@ -93,7 +101,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
               children: [
                 _buildBetListTab(null),
                 _buildBetListTab(BetStatus.pending),
-                _buildBetListTab(BetStatus.settled),
+                _buildBetListTab(BetStatus.won, BetStatus.lost),
               ],
             ),
     );
@@ -202,10 +210,12 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
     );
   }
   
-  Widget _buildBetListTab(BetStatus? filterStatus) {
-    final filteredBets = filterStatus == null 
-        ? _betRecords 
-        : _betRecords.where((bet) => bet.status == filterStatus).toList();
+  Widget _buildBetListTab(BetStatus? filterStatus1, [BetStatus? filterStatus2]) {
+    final filteredBets = _betRecords.where((bet) {
+      if (filterStatus1 == null) return true;
+      if (filterStatus2 == null) return bet.status == filterStatus1;
+      return bet.status == filterStatus1 || bet.status == filterStatus2;
+    }).toList();
     
     return Column(
       children: [
@@ -281,7 +291,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                   ),
                   const SizedBox(width: 8),
                   Text(
-                    bet.betId,
+                    bet.id,
                     style: const TextStyle(
                       fontSize: 12,
                       color: AppColors.textSecondary,
@@ -300,7 +310,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
               ),
               const SizedBox(height: 12),
               Text(
-                bet.matchName,
+                bet.mainTitle,
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
@@ -319,7 +329,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
-                      '${bet.betType} @ ${bet.odds.toStringAsFixed(2)}',
+                      '${bet.betType.name} @ ${bet.totalOdds.toStringAsFixed(2)}',
                       style: const TextStyle(
                         fontSize: 12,
                         color: AppColors.primary,
@@ -350,7 +360,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
-                      bet.statusText,
+                      bet.status.displayName,
                       style: TextStyle(
                         fontSize: 12,
                         color: statusColor,
@@ -359,7 +369,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                     ),
                   ),
                   const Spacer(),
-                  if (bet.status == BetStatus.settled)
+                  if (bet.status == BetStatus.won || bet.status == BetStatus.lost)
                     Text(
                       '${bet.profit >= 0 ? '+' : ''}¥${bet.profit.toStringAsFixed(2)}',
                       style: TextStyle(
@@ -370,7 +380,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                     )
                   else if (bet.status == BetStatus.pending)
                     Text(
-                      '可赢: ¥${bet.potentialWin.toStringAsFixed(2)}',
+                      '可赢: ¥${bet.potentialWinnings.toStringAsFixed(2)}',
                       style: const TextStyle(
                         fontSize: 12,
                         color: AppColors.textSecondary,
@@ -393,9 +403,9 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
         return AppColors.success;
       case BetStatus.lost:
         return AppColors.error;
-      case BetStatus.settled:
-        return AppColors.info;
       case BetStatus.cancelled:
+        return AppColors.textSecondary;
+      case BetStatus.void_:
         return AppColors.textSecondary;
     }
   }
@@ -408,10 +418,10 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
         return Icons.check_circle;
       case BetStatus.lost:
         return Icons.cancel;
-      case BetStatus.settled:
-        return Icons.sports_soccer;
       case BetStatus.cancelled:
         return Icons.block;
+      case BetStatus.void_:
+        return Icons.remove_circle_outline;
     }
   }
   
@@ -465,16 +475,16 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                 const SizedBox(height: 20),
                 
                 // 投注信息
-                _buildDetailItem('投注单号', bet.betId),
-                _buildDetailItem('比赛', bet.matchName),
-                _buildDetailItem('投注类型', bet.betType),
-                _buildDetailItem('赔率', bet.odds.toStringAsFixed(2)),
+                _buildDetailItem('投注单号', bet.id),
+                _buildDetailItem('比赛', bet.mainTitle),
+                _buildDetailItem('投注类型', bet.betType.name),
+                _buildDetailItem('赔率', bet.totalOdds.toStringAsFixed(2)),
                 _buildDetailItem('投注金额', '¥${bet.amount.toStringAsFixed(2)}'),
-                _buildDetailItem('状态', bet.statusText),
-                if (bet.status == BetStatus.settled)
+                _buildDetailItem('状态', bet.status.displayName),
+                if (bet.status == BetStatus.won || bet.status == BetStatus.lost)
                   _buildDetailItem('盈亏', '${bet.profit >= 0 ? '+' : ''}¥${bet.profit.toStringAsFixed(2)}'),
                 if (bet.status == BetStatus.pending)
-                  _buildDetailItem('可赢金额', '¥${bet.potentialWin.toStringAsFixed(2)}'),
+                  _buildDetailItem('可赢金额', '¥${bet.potentialWinnings.toStringAsFixed(2)}'),
                 _buildDetailItem('下注时间', _formatDateTime(bet.createdAt)),
                 if (bet.settledAt != null)
                   _buildDetailItem('结算时间', _formatDateTime(bet.settledAt!)),
@@ -482,7 +492,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                 const SizedBox(height: 20),
                 
                 // 操作按钮
-                if (bet.status == BetStatus.pending) ..[
+                if (bet.status == BetStatus.pending)
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -495,9 +505,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                       child: const Text('取消投注'),
                     ),
                   ),
-                ],
-                
-                const SizedBox(bottom: 20),
+                const SizedBox(height: 20),
               ],
             ),
           );
@@ -560,13 +568,13 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
     
     if (confirmed == true) {
       try {
-        final success = await _betService.cancelBet(bet.id);
-        if (success) {
+        final result = await _betService.cancelBet(bet.id);
+        if (result['success']) {
           _showMessage('投注已取消');
           Navigator.pop(context); // 关闭详情页
           _loadData(); // 刷新数据
         } else {
-          _showMessage('取消失败，请重试', isError: true);
+          _showMessage(result['message'] ?? '取消失败，请重试', isError: true);
         }
       } catch (e) {
         _showMessage('取消失败: $e', isError: true);
@@ -595,7 +603,7 @@ class _BetRecordPageState extends State<BetRecordPage> with TickerProviderStateM
                       value: null,
                       child: Text('全部'),
                     ),
-                    ...BetStatus.values.map((status) => DropdownMenuItem(
+                    ...BetStatus.values.where((s) => s != BetStatus.void_).map((status) => DropdownMenuItem(
                       value: status,
                       child: Text(status.displayName),
                     )),

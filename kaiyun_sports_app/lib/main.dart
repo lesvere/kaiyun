@@ -37,6 +37,9 @@ class KaiyunSportsApp extends StatelessWidget {
             getPages: AppPages.pages,
             locale: const Locale('zh', 'CN'),
             fallbackLocale: const Locale('zh', 'CN'),
+            routingCallback: (routing) {
+              Get.find<NavigationController>().handleRouteChange(routing);
+            },
             // 全局页面切换动画配置
             defaultTransition: Transition.rightToLeftWithFade,
             transitionDuration: const Duration(milliseconds: 300),

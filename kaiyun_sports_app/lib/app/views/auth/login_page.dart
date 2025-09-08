@@ -394,7 +394,7 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                if (showBiometric) ..[
+                if (showBiometric) ...[
                   _buildSocialLoginButton(
                     icon: Icons.fingerprint,
                     label: '生物认证',

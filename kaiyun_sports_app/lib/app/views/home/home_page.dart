@@ -785,7 +785,7 @@ class _HomeTabPageState extends State<_HomeTabPage>
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
-            gradient: const LinearGradient(
+            gradient: LinearGradient(
               colors: [AppColors.vipGold, AppColors.vipGoldLight],
             ),
           ),
