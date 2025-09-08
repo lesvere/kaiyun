@@ -20,15 +20,13 @@ class NavigationController extends GetxController {
   void onInit() {
     super.onInit();
     // 监听路由变化
-    Get.routingCallback = (routing) {
-      _handleRouteChange(routing);
-    };
+    ever(Get.rawRoute, _handleRouteChange);
   }
   
   /// 处理路由变化
-  void _handleRouteChange(Routing? routing) {
-    if (routing != null && routing.current != null) {
-      final currentRoute = routing.current!;
+  void _handleRouteChange(RawRoute? rawRoute) {
+    if (rawRoute != null && rawRoute.settings.name != null) {
+      final currentRoute = rawRoute.settings.name!;
       
       // 更新导航历史
       if (navigationHistory.isEmpty || navigationHistory.last != currentRoute) {
