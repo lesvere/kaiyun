@@ -1,3 +1,4 @@
 [submodule "flutter-3.16.9-stable"]
 	path = flutter-3.16.9-stable
 	url = https://github.com/flutter/flutter.git
+	branch = stable
