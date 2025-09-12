@@ -8,10 +8,10 @@ export default defineConfig({
   server: {
     port: 5173, // 开发服务器的端口
     proxy: {
-      '/api': {
+      '/vite': {
         target: targetServer, // 目标服务器地址
         changeOrigin: true, // 修改请求的来源
-        rewrite: (path) => path.replace(/^\/api/, ''), // 重写路径
+        rewrite: (path) => path.replace(/^\/vite/, ''), // 重写路径
         configure: (proxy) => {
           proxy.on('proxyReq', (proxyReq) => {
             console.log(`[Proxy Request] ${proxyReq.method} ${proxyReq.path}`);
