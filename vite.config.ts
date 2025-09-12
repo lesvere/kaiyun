@@ -1,0 +1,28 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 5173, // 开发服务器的端口
+    proxy: {
+      '/api': {
+        target: 'https://www.mf8ezm.com', // 目标服务器地址
+        changeOrigin: true, // 修改请求的来源
+        rewrite: (path) => path.replace(/^\/api/, ''), // 重写路径
+        configure: (proxy) => {
+          proxy.on('proxyReq', (proxyReq) => {
+            proxyReq.setHeader('x-api-client', 'h5');
+            proxyReq.setHeader('x-api-site', '4002');
+            proxyReq.setHeader('x-api-version', '1.0.0');
+            proxyReq.setHeader('x-api-type', 'h5');
+          });
+          proxy.on('proxyRes', (proxyRes) => {
+            // Remove the Access-Control-Allow-Origin header from the target server
+            delete proxyRes.headers['access-control-allow-origin'];
+          });
+        },
+      },
+    },
+  },
+});
