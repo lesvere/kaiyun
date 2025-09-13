@@ -33,6 +33,19 @@ const palette = {
 
   overlay20: "rgba(25, 16, 21, 0.2)",
   overlay50: "rgba(25, 16, 21, 0.5)",
+
+  // New colors from the Kaiyun project
+  kaiyun_background: "#f0f2f5",
+  kaiyun_white: "#ffffff",
+  kaiyun_primaryBlue: "#3a7fff",
+  kaiyun_textPrimary: "#333333",
+  kaiyun_textSecondary: "#888888",
+  kaiyun_textLight: "#5e6a7d",
+  kaiyun_border: "#eeeeee",
+  kaiyun_cardBg: "#ffffff", // from linear-gradient
+  kaiyun_buttonGradient: "#3a7fff", // from linear-gradient
+  kaiyun_iconBg: "#3876fe", // from linear-gradient
+  kaiyun_activeIconBg: "#2968ec", // from linear-gradient
 } as const
 
 export const colors = {
@@ -49,23 +62,23 @@ export const colors = {
   /**
    * The default text color in many components.
    */
-  text: palette.neutral800,
+  text: palette.kaiyun_textPrimary,
   /**
    * Secondary text information.
    */
-  textDim: palette.neutral600,
+  textDim: palette.kaiyun_textSecondary,
   /**
    * The default color of the screen background.
    */
-  background: palette.neutral200,
+  background: palette.kaiyun_background,
   /**
    * The default border color.
    */
-  border: palette.neutral400,
+  border: palette.kaiyun_border,
   /**
    * The main tinting color.
    */
-  tint: palette.primary500,
+  tint: palette.kaiyun_primaryBlue,
   /**
    * The inactive tinting color.
    */
@@ -73,7 +86,7 @@ export const colors = {
   /**
    * A subtle color used for lines.
    */
-  separator: palette.neutral300,
+  separator: palette.kaiyun_border,
   /**
    * Error messages.
    */
